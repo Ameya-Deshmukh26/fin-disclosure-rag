@@ -1,0 +1,8 @@
+.env
+*.env
+hugging.env
+*.pkl
+__pycache__/
+*.pyc
+chroma_db/
+query_cache.json
