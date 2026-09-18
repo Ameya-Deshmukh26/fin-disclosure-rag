@@ -13,7 +13,7 @@
     "note": "Weekly WORK video — walkthrough of the fin-disclosure-rag production RAG system with real measured numbers. Claude bookends + one real ClaudeCodeBeat (hybrid.py RRF) + ClaudeVerdictArtifact + YOUR TURN + ClaudeTitleOutro. Manim body. Persona: Liam, in for Ameya (Onyx). @HumanitariansAI. All figures real (run_eval.py, compare_embeddings.py, weight_sweep.py, benchmark.py; see SOURCES.md/FACTCHECK.md).",
     "total_estimated_duration_seconds": 330,
     "build": {
-      "at": "2026-08-31T11:32:58",
+      "at": "2026-09-14T11:17:53",
       "cut": "master",
       "filled": 12,
       "of": 12,
@@ -59,7 +59,7 @@
         "status": "VIDEO",
         "src": "media\\B00.mp4",
         "filled_by": "media",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -84,7 +84,7 @@
         "status": "MANIM",
         "src": "manim\\B01.mp4",
         "filled_by": "manim:B01_Task",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -109,7 +109,7 @@
         "status": "MANIM",
         "src": "manim\\B02.mp4",
         "filled_by": "manim:B02_Pipeline",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -134,7 +134,7 @@
         "status": "MANIM",
         "src": "manim\\B03.mp4",
         "filled_by": "manim:B03_Chunking",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -159,7 +159,7 @@
         "status": "MANIM",
         "src": "manim\\B04.mp4",
         "filled_by": "manim:B04_Embeddings",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -184,7 +184,7 @@
         "status": "MANIM",
         "src": "manim\\B05.mp4",
         "filled_by": "manim:B05_Hybrid",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -209,7 +209,7 @@
         "status": "MANIM",
         "src": "manim\\B06.mp4",
         "filled_by": "manim:B06_Latency",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -241,7 +241,7 @@
         "status": "VIDEO",
         "src": "media\\B07.mp4",
         "filled_by": "media",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -266,7 +266,7 @@
         "status": "MANIM",
         "src": "manim\\B08.mp4",
         "filled_by": "manim:B08_Surprises",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -302,7 +302,7 @@
         "status": "VIDEO",
         "src": "media\\B09.mp4",
         "filled_by": "media",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -337,7 +337,7 @@
         "status": "VIDEO",
         "src": "media\\B10.mp4",
         "filled_by": "media",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     },
     {
@@ -369,7 +369,7 @@
         "status": "VIDEO",
         "src": "media\\B11.mp4",
         "filled_by": "media",
-        "at": "2026-08-31T11:32:58"
+        "at": "2026-09-14T11:17:53"
       }
     }
   ]

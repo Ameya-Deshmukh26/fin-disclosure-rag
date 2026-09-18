@@ -12,7 +12,7 @@
     "note": "RAG series extension: how generation runs. Tied to the project's 1288ms model latency (PRODUCTION_NOTES.md §4). Claude bookends + Manim body. Liam, in for Ameya (Onyx). @HumanitariansAI.",
     "total_estimated_duration_seconds": 300,
     "build": {
-      "at": "2026-09-07T21:39:13",
+      "at": "2026-09-14T11:39:57",
       "cut": "master",
       "filled": 12,
       "of": 12,
@@ -56,7 +56,7 @@
         "status": "VIDEO",
         "src": "media\\B00.mp4",
         "filled_by": "media",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -79,7 +79,7 @@
         "status": "MANIM",
         "src": "manim\\B01.mp4",
         "filled_by": "manim:B01_Autoregress",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -102,7 +102,7 @@
         "status": "MANIM",
         "src": "manim\\B02.mp4",
         "filled_by": "manim:B02_PrefillDecode",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -125,7 +125,7 @@
         "status": "MANIM",
         "src": "manim\\B03.mp4",
         "filled_by": "manim:B03_KVCache",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -148,7 +148,7 @@
         "status": "MANIM",
         "src": "manim\\B04.mp4",
         "filled_by": "manim:B04_Batching",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -171,7 +171,7 @@
         "status": "MANIM",
         "src": "manim\\B05.mp4",
         "filled_by": "manim:B05_Quantize",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -194,7 +194,7 @@
         "status": "MANIM",
         "src": "manim\\B06.mp4",
         "filled_by": "manim:B06_Speculative",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -224,7 +224,7 @@
         "status": "VIDEO",
         "src": "media\\B07.mp4",
         "filled_by": "media",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -247,7 +247,7 @@
         "status": "MANIM",
         "src": "manim\\B08.mp4",
         "filled_by": "manim:B08_Levers",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -281,7 +281,7 @@
         "status": "VIDEO",
         "src": "media\\B09.mp4",
         "filled_by": "media",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -314,7 +314,7 @@
         "status": "VIDEO",
         "src": "media\\B10.mp4",
         "filled_by": "media",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     },
     {
@@ -344,7 +344,7 @@
         "status": "VIDEO",
         "src": "media\\B11.mp4",
         "filled_by": "media",
-        "at": "2026-09-07T21:39:13"
+        "at": "2026-09-14T11:39:57"
       }
     }
   ]

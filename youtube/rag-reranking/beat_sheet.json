@@ -13,7 +13,7 @@
     "note": "RAG-series episode on reranking. Claude bookends + one real ClaudeCodeBeat (rerank.py) + ClaudeVerdictArtifact + YOUR TURN + ClaudeTitleOutro. Manim body. Persona: Liam, in for Ameya (Onyx). @HumanitariansAI throughout. Numbers are real, from fin-disclosure-rag (rerank.py, benchmark.py; see SOURCES.md/FACTCHECK.md).",
     "total_estimated_duration_seconds": 300,
     "build": {
-      "at": "2026-08-31T11:22:15",
+      "at": "2026-09-14T11:24:24",
       "cut": "master",
       "filled": 11,
       "of": 11,
@@ -59,7 +59,7 @@
         "status": "VIDEO",
         "src": "media\\B00.mp4",
         "filled_by": "media",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     },
     {
@@ -84,7 +84,7 @@
         "status": "MANIM",
         "src": "manim\\B01.mp4",
         "filled_by": "manim:B01_Problem",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     },
     {
@@ -109,7 +109,7 @@
         "status": "MANIM",
         "src": "manim\\B02.mp4",
         "filled_by": "manim:B02_Encoders",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     },
     {
@@ -134,7 +134,7 @@
         "status": "MANIM",
         "src": "manim\\B03.mp4",
         "filled_by": "manim:B03_Mechanism",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     },
     {
@@ -159,7 +159,7 @@
         "status": "MANIM",
         "src": "manim\\B04.mp4",
         "filled_by": "manim:B04_TwoStage",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     },
     {
@@ -191,7 +191,7 @@
         "status": "VIDEO",
         "src": "media\\B05.mp4",
         "filled_by": "media",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     },
     {
@@ -216,7 +216,7 @@
         "status": "MANIM",
         "src": "manim\\B06.mp4",
         "filled_by": "manim:B06_Cost",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     },
     {
@@ -241,7 +241,7 @@
         "status": "MANIM",
         "src": "manim\\B07.mp4",
         "filled_by": "manim:B07_When",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     },
     {
@@ -277,7 +277,7 @@
         "status": "VIDEO",
         "src": "media\\B08.mp4",
         "filled_by": "media",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     },
     {
@@ -312,7 +312,7 @@
         "status": "VIDEO",
         "src": "media\\B09.mp4",
         "filled_by": "media",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     },
     {
@@ -344,7 +344,7 @@
         "status": "VIDEO",
         "src": "media\\B10.mp4",
         "filled_by": "media",
-        "at": "2026-08-31T11:22:15"
+        "at": "2026-09-14T11:24:24"
       }
     }
   ]

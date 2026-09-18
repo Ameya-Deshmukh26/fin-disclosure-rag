@@ -12,7 +12,7 @@
     "note": "RAG series: tokenization. Grounded in VIDEO_SCRIPT.md SEGMENT 3 (real tokenizer output, chars/token ratios, 384-token truncation). Claude bookends + Manim body. Liam, in for Ameya (Onyx). @HumanitariansAI.",
     "total_estimated_duration_seconds": 295,
     "build": {
-      "at": "2026-09-11T15:50:42",
+      "at": "2026-09-14T11:53:01",
       "cut": "master",
       "filled": 12,
       "of": 12,
@@ -56,7 +56,7 @@
         "status": "VIDEO",
         "src": "media\\B00.mp4",
         "filled_by": "media",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -79,7 +79,7 @@
         "status": "MANIM",
         "src": "manim\\B01.mp4",
         "filled_by": "manim:B01_Vocab",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -102,7 +102,7 @@
         "status": "MANIM",
         "src": "manim\\B02.mp4",
         "filled_by": "manim:B02_Compare",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -125,7 +125,7 @@
         "status": "MANIM",
         "src": "manim\\B03.mp4",
         "filled_by": "manim:B03_Shred",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -148,7 +148,7 @@
         "status": "MANIM",
         "src": "manim\\B04.mp4",
         "filled_by": "manim:B04_Ratio",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -171,7 +171,7 @@
         "status": "MANIM",
         "src": "manim\\B05.mp4",
         "filled_by": "manim:B05_Consequences",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -194,7 +194,7 @@
         "status": "MANIM",
         "src": "manim\\B06.mp4",
         "filled_by": "manim:B06_Truncation",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -224,7 +224,7 @@
         "status": "VIDEO",
         "src": "media\\B07.mp4",
         "filled_by": "media",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -247,7 +247,7 @@
         "status": "MANIM",
         "src": "manim\\B08.mp4",
         "filled_by": "manim:B08_Fix",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -281,7 +281,7 @@
         "status": "VIDEO",
         "src": "media\\B09.mp4",
         "filled_by": "media",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -314,7 +314,7 @@
         "status": "VIDEO",
         "src": "media\\B10.mp4",
         "filled_by": "media",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     },
     {
@@ -344,7 +344,7 @@
         "status": "VIDEO",
         "src": "media\\B11.mp4",
         "filled_by": "media",
-        "at": "2026-09-11T15:50:42"
+        "at": "2026-09-14T11:53:01"
       }
     }
   ]
