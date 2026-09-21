@@ -1,0 +1,31 @@
+{
+  "status": "ready",
+  "output": "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\brutalist.art\\renders\\profile-ameya-deshmukh.mp4",
+  "sha256": "3b7ef22951a2f929865e759dec8830a74a6db7155d21db633f7e783f8a576e4a",
+  "duration_s": 190.91666666666666,
+  "input_sha256": {
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\manim\\B01.mp4": "85a132f8d399021ac13343c744c666f73399b3a8b130f2a3a019e6f16ab6dcb7",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\manim\\B02.mp4": "ebefe14a049e57ceaa0fe21d068f6cd512a5d4056706a870b4cdc07dd6c577d3",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\manim\\B03.mp4": "2e31a6000d556c21bca7b21cfc80fc4d8aad06bd3b76226e5e85920ba04478a0",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\manim\\B04.mp4": "4d69354a590c60d7e8404f697bb6c1a5cdfbade81591de16fc01cac11a3c8c60",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\manim\\B05.mp4": "89d91a43f33a9021ef97535125d6999e992ceb92603dc7489d6a8d3c31640507",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\manim\\B06.mp4": "3304c0c0081160a524c47f0f3119e43831513054f2cc892e37d8c94e18b0a244",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\manim\\B08.mp4": "75ae350ab5711f363297d233b9fbcd22fb27d537ba0f52c8e5b71729a3dda5c9",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\media\\B00.mp4": "ede9e90ec84130212834a819e8273723c328b5cad0f77f79c3946ecd5a9f2a75",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\media\\B07.mp4": "d9adc21a0f6a241692e050664b6057fb56bf1b1eb0644cb606e376b87ec62d47",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\media\\B09.mp4": "602b284a2f0a5431489c25bc4b37b268f525b9f5d42d6552a9dbe0fe7d563d70",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\media\\B10.mp4": "3849ff2fe84c30f3640968469d6979f82e04ec3d061118b77a638eee7737197d",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B00.mp3": "a4aa89c05aba104e5f1eab88c6ce41baa163b2eb91ecd7dcd46855f655c9e7d0",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B01.mp3": "3e715db253d3a4c43afa8c5028c679959388faba959b38ed9a0b34e83100aea8",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B02.mp3": "cec8611025eb690a5c704ce0b747ad2f1bd0ca177f6863f6dce7d9e71a5a4519",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B03.mp3": "a53c33e73d20ec7742d9f52c0e400935b8139a7a33a1598a7c7248600224ba46",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B04.mp3": "a3c39dd81bb1b6b97511e65348147dae5de846182861bc7662ff7bdfcf265c35",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B05.mp3": "7c07b9819c2d9d91a70b5398207a6df673dad6a2e480adfebc26242e38a738a8",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B06.mp3": "b7ed9007ef21e528a90ffd741b7aa828276894bc13a34097dc7aae2fd0b708cd",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B07.mp3": "695dd5f4a07dbdab73873f3dbd1b731b6786630585d632dab4d0b68e6f5e7674",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B08.mp3": "1605cca7870a33a2084d76b2689adcfd915650a0cc16ec0255d6af807c931a54",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B09.mp3": "487e01600921c85b78bc0b6f81a125b1af4b20e9b42ff079a325cd0fd71de815",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\profile-ameya-deshmukh\\mp3\\beat-B10.mp3": "b7b3e667510fcedba6142a85904dba93f5e2d62b1cfb97b4f2c2baeb7a70b6ec"
+  },
+  "at": "2026-09-21T17:06:17.629392+00:00"
+}
