@@ -1,0 +1,23 @@
+{
+  "status": "ready",
+  "output": "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\brutalist.art\\renders\\rag-eval-production-vertical.mp4",
+  "sha256": "e27953dbc9e71aa361692e55588180d663f53c0a4cebecb41709ca0628222fff",
+  "duration_s": 52.541666666666664,
+  "input_sha256": {
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\manim\\B01.mp4": "af8dc320b2670e240017c687f2f12d3cc2d15778ce3c40905b85af9dc7dca8cf",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\manim\\B02.mp4": "6ff0cbcef4e431390c0e365dbf3454d655014bd57efe0725a7d0f700ccc67233",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\manim\\B03.mp4": "c3eb0672825b7b380483b18a3a00bb062a02f0e8c280cea5b657122b15981df3",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\manim\\B04.mp4": "cfd4fd6fff7991d372f3ea6dd41e936176ebb835773ed87352a63d10802c6cb3",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\manim\\B05.mp4": "1448ae1337c11b7eff05f4c255ab40f3f3444854aa633182eea2cace38ff1caf",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\manim\\B06.mp4": "81d3263bfb57cc10e28ae2a421790384cbb79c96186b6cbd9c6d4822c7f2e233",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\manim\\B07.mp4": "079be14e491c732c622a13cc231a73300247c70fde774d7619127211ed28a830",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\mp3\\beat-B01.mp3": "c2a15bbef32e78ac72d89f5a5271d00119fbe5e8caf4ed64c43fb2002d9fc985",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\mp3\\beat-B02.mp3": "43542ea42d22542a34dd1fd7ff483ec17009d720ff7be40c71f05c5789d96094",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\mp3\\beat-B03.mp3": "7484bd8ef10605b77b573eff5fd2b132727ccf8a1f710a8d677ab4a0d7570d2c",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\mp3\\beat-B04.mp3": "1c10f045093c9d6a412220b7d5ea53858f149a279125ee5a36bb91d0ba56600b",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\mp3\\beat-B05.mp3": "d75b254bfb55823b40fcc23ebd1437141133ffeebb6c7ee18bd52381d5c4c3a2",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\mp3\\beat-B06.mp3": "dd9540c9cddc4da02b4d2da9741c1a905acdb4f1746d2fb6010d83adb9e74c1c",
+    "C:\\Users\\ameya\\OneDrive\\Documents\\github_ameya\\fin-disclosure-rag\\youtube\\rag-eval-production\\vertical\\mp3\\beat-B07.mp3": "d8928574cf4ec9a679ca150b7e07a40576ae8cc97d04fd9a98c3f79a17849a6f"
+  },
+  "at": "2026-10-02T17:07:24.722727+00:00"
+}

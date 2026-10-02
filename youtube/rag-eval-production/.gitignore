@@ -1,0 +1,12 @@
+media/
+mp3/
+manim/
+mp4/
+images/
+clips/
+pantry/
+_qc/
+__pycache__/
+*.mp4
+*.mp3
+!qc-sheet.png
