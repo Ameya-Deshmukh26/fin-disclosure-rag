@@ -2,7 +2,7 @@ name: evals
 
 on:
   push:
-    paths: ["evals/**", "tests/**", "goldens/**", "generate.py", "hybrid.py", "retrieval.py"]
+    paths: ["evals/**", "tests/**", "goldens/**", "app/**", "generate.py", "hybrid.py", "retrieval.py", ".github/workflows/**"]
   pull_request:
   workflow_dispatch:   # full suite with real model calls: run on demand
 
