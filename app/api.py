@@ -25,9 +25,11 @@ from starlette.concurrency import run_in_threadpool
 from evals import checks
 from evals.config import GENERATOR_MODEL
 from evals.rag import RAG
+from generate import build_prompt
 
 MAX_QUESTION_CHARS = 300
 REFUSAL = "I don't have enough information to answer that."
+SYSTEM_PROMPT = build_prompt("", [])[0]["content"]   # used to detect prompt leaks in outputs
 
 app = FastAPI(title="fin-disclosure-rag", version="1.0")
 
@@ -57,6 +59,12 @@ async def ask(q: Question):
         hit = _cache[key]
         return {**hit, "cache": "hit",
                 "latency_ms": {"total": round((time.perf_counter() - t0) * 1000, 2)}}
+    # input guardrail: known prompt-injection phrasing never reaches the model (saves tokens too)
+    if checks.is_injection(q.question):
+        return {"question": q.question, "answer": REFUSAL, "sources": [],
+                "checks": {"number_lock_ok": True, "citations_valid": False, "refused": True},
+                "guardrail": "blocked: prompt-injection pattern in the question",
+                "latency_ms": {"total": round((time.perf_counter() - t0) * 1000, 2)}, "cache": "miss"}
     try:
         # retrieval is CPU-bound and generation is a blocking SDK call: keep the event loop free
         out = await run_in_threadpool(rag().answer, q.question)
@@ -70,6 +78,10 @@ async def ask(q: Question):
     if not lock["number_lock_ok"]:
         answer = REFUSAL
         guardrail = f"withheld: numbers not found in the source filings {lock['unsupported_numbers']}"
+    elif checks.leaks_prompt(out["answer"], SYSTEM_PROMPT):
+        # output guardrail: catches leaks even when the attack wording is new
+        answer = REFUSAL
+        guardrail = "withheld: the answer repeated the system prompt"
 
     body = {
         "question": q.question,
