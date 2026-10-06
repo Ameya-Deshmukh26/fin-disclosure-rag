@@ -1,0 +1,11 @@
+*
+!generate.py
+!hybrid.py
+!retrieval.py
+!evals/
+!app/
+!data_big/
+!index_big.pkl
+!mlflow_snapshot/
+evals/__pycache__
+app/__pycache__

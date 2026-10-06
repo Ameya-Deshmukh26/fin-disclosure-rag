@@ -10,3 +10,4 @@ mlflow.db
 mlruns/
 mlartifacts/
 results/run_*.json
+mlflow_snapshot/

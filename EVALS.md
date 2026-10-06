@@ -127,3 +127,9 @@ failing the job if any gate regresses.
   caught by the deterministic citation gate.
 - Majority-vote three judge calls for faithfulness, the noisiest gated metric.
 - Hand-label `results/calibration.csv` to report judge-human agreement (Cohen's kappa).
+
+## Deployment
+The evaluated pipeline is served as a FastAPI app on AWS Lambda (container image from ECR,
+Function URL, Bedrock for generation, IAM execution role), with the same number-lock check
+applied at runtime as a guardrail. A read-only snapshot of the MLflow store is deployed the
+same way. See [deploy/README.md](deploy/README.md).
