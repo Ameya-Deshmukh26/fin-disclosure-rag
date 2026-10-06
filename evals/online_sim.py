@@ -7,7 +7,7 @@ This sends 30 realistic questions through the exact pipeline the API serves and 
 trace for each one in MLflow:
 
   ask (CHAIN)                 root span: question, category, final answer the user sees
-   ├─ input_guardrail (TOOL)  prompt-injection filter; a blocked question stops here
+   ├─ router (TOOL)           picks the path (evals/router.py); 0-token routes stop here
    ├─ entity_filter (PARSER)  which company the question names, if any
    ├─ retrieve (RETRIEVER)    the filings handed to the model
    ├─ generate (CHAT_MODEL)   Bedrock call, with token usage on the span
@@ -22,13 +22,14 @@ Question mix (what real traffic looks like):
   typo         partial names, typos, abbreviations                -> answer or refuse safely
   unanswerable fake companies, facts not in any filing, wrong
                year, off-topic, prompt injection                  -> should refuse
+  smalltalk    greetings                                          -> fixed reply, no model
 
 The run logs, overall and per category: average tokens per question, refusal rate
 ("I don't have enough information"), guardrail triggers, latency p50/p95, and correctness
 where the right answer is known. Each trace also gets code-based feedback (refused,
 number lock) so the MLflow trace view can be filtered by them.
 
-    python -m evals.online_sim             # the 32-question traffic mix
+    python -m evals.online_sim             # the 35-question traffic mix
     python -m evals.online_sim --attacks   # prompt-injection probes only
 """
 import argparse
@@ -54,6 +55,7 @@ from mlflow.tracing.constant import SpanAttributeKey  # noqa: E402
 from eval_gen import QUESTION_BY_TYPE  # noqa: E402
 from evals import checks  # noqa: E402
 from evals.config import GENERATOR_MODEL, GOLDENS_RAG, N_CONTEXT_DOCS  # noqa: E402
+from evals.router import SMALLTALK_SAMPLES, Router  # noqa: E402
 from evals.tracking import _mlflow  # noqa: E402
 from generate import build_prompt  # noqa: E402
 
@@ -132,27 +134,32 @@ def build_questions(rag: RAG) -> list[dict]:
     for q, kind in UNANSWERABLE:
         qs.append({"category": "unanswerable", "question": q, "expect": "refuse",
                    "kind": kind, "expected_numbers": []})
+    for q in SMALLTALK_SAMPLES[:3]:
+        qs.append({"category": "smalltalk", "question": q, "expect": "either", "expected_numbers": []})
     return qs
 
 
-def traced_ask(rag: RAG, item: dict) -> dict:
+def traced_ask(rag: RAG, router: Router, item: dict) -> dict:
     q = item["question"]
     sources, entity, model_answer, gen_ms = [], None, None, 0.0
     usage = {"input_tokens": 0, "output_tokens": 0, "total_tokens": 0}
     with mlflow.start_span(name="ask", span_type=SpanType.CHAIN) as root:
         root.set_inputs({"question": q})
         root.set_attribute("category", item["category"])
-        mlflow.update_current_trace(tags={"category": item["category"]})   # filterable in the UI
         t0 = time.perf_counter()
 
-        with mlflow.start_span(name="input_guardrail", span_type=SpanType.TOOL) as sp:
-            blocked = checks.is_injection(q)
+        with mlflow.start_span(name="router", span_type=SpanType.TOOL) as sp:
+            route = router.route(q)
             sp.set_inputs({"question": q})
-            sp.set_outputs({"blocked": blocked})
+            sp.set_outputs({"route": route.name, "needs_model": route.needs_model,
+                            "company": route.company})
+        # both filterable in the trace UI
+        mlflow.update_current_trace(tags={"category": item["category"], "route": route.name})
 
-        if blocked:   # same as the API: the model is never called, so it costs 0 tokens
-            answer = REFUSAL
-            guardrail = "blocked: prompt-injection pattern in the question"
+        if not route.needs_model:   # answered by the router: no search, no model, 0 tokens
+            answer, sources = route.answer, route.sources
+            guardrail = ("blocked: prompt-injection pattern in the question"
+                         if route.name == "injection" else None)
         else:
             with mlflow.start_span(name="entity_filter", span_type=SpanType.PARSER) as sp:
                 entity = rag.entity_in(q)
@@ -203,7 +210,8 @@ def traced_ask(rag: RAG, item: dict) -> dict:
     correct = (bool(item["expected_numbers"]) and not refused
                and all(n in found for n in item["expected_numbers"]))
     return {**item, "answer": answer, "model_answer": model_answer, "sources": sources,
-            "entity": entity, "refused": refused, "guardrail": guardrail,
+            "entity": entity, "route": route.name, "model_called": route.needs_model,
+            "refused": refused, "guardrail": guardrail,
             "guardrail_triggered": guardrail is not None, "correct": correct,
             "trace_id": trace_id, **usage,
             "generate_ms": round(gen_ms, 1), "total_ms": round(total_ms, 1)}
@@ -222,6 +230,7 @@ def summarize(rows: list[dict], prefix: str) -> dict:
         f"{prefix}.avg_total_tokens": statistics.mean(r["total_tokens"] for r in rows),
         f"{prefix}.refusal_rate": 100.0 * sum(r["refused"] for r in rows) / len(rows),
         f"{prefix}.guardrail_triggers": sum(r["guardrail_triggered"] for r in rows),
+        f"{prefix}.model_call_rate": 100.0 * sum(r["model_called"] for r in rows) / len(rows),
         f"{prefix}.latency_p50_ms": statistics.median(r["total_ms"] for r in rows),
         f"{prefix}.latency_p95_ms": _p95([r["total_ms"] for r in rows]),
     }
@@ -237,6 +246,7 @@ def main():
     args = ap.parse_args()
     _mlflow()  # sets tracking URI + experiment
     rag = RAG()
+    router = Router.load()
     if args.attacks:
         questions = [{"category": "attack", "question": q, "expect": "refuse", "kind": kind,
                       "expected_numbers": []} for q, kind in ATTACKS]
@@ -252,12 +262,13 @@ def main():
         mlflow.set_tags({"stage": "online_monitoring"})
         mlflow.log_params({"generator": GENERATOR_MODEL, "n_questions": len(questions),
                            "categories": ",".join(categories),
+                           "router": "rules (evals/router.py)",
                            "guardrails": "injection_filter,number_lock,prompt_leak"})
         rows = []
         for item in questions:
-            r = traced_ask(rag, item)
+            r = traced_ask(rag, router, item)
             rows.append(r)
-            print(f"[{r['category']:<12}] {'REFUSED' if r['refused'] else 'answered':<8} "
+            print(f"[{r['category']:<12}] {r['route']:<9} {'REFUSED' if r['refused'] else 'answered':<8} "
                   f"tok={r['total_tokens']:>5} {r['total_ms']:>7.0f}ms  {r['question'][:60]}")
         # traces are exported asynchronously: flush before attaching feedback to them
         mlflow.flush_trace_async_logging()
@@ -269,7 +280,7 @@ def main():
         for cat in categories:
             metrics.update(summarize([r for r in rows if r["category"] == cat], f"online.{cat}"))
         mlflow.log_metrics({k: float(v) for k, v in metrics.items()})
-        cols = ["category", "question", "answer", "model_answer", "guardrail", "refused", "correct",
+        cols = ["category", "route", "question", "answer", "model_answer", "guardrail", "refused", "correct",
                 "input_tokens", "output_tokens", "total_tokens", "total_ms", "entity", "trace_id"]
         mlflow.log_table({c: [r.get(c) for r in rows] for c in cols}, artifact_file="online_requests.json")
     mlflow.flush_trace_async_logging()
