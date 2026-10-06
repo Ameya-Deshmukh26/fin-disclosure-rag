@@ -6,3 +6,7 @@ __pycache__/
 *.pyc
 chroma_db/
 query_cache.json
+mlflow.db
+mlruns/
+mlartifacts/
+results/run_*.json

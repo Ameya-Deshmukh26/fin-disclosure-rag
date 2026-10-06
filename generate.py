@@ -25,10 +25,12 @@ def build_prompt(question: str, retrieved_chunks: list[dict]) -> list[dict]:
         {"role": "user", "content": user_msg},
     ]
 
-def call_llm(messages: list[dict], model: str = "meta-llama/Llama-3.1-8B-Instruct") -> str:
+def call_llm(messages: list[dict], model: str = "meta-llama/Llama-3.1-8B-Instruct",
+             temperature: float | None = None) -> str:
     token = os.environ.get("HF_TOKEN")
     if not token:
         raise ValueError("HF_TOKEN not found in environment")
     client = InferenceClient(token=token)
-    response = client.chat_completion(messages=messages, model=model, max_tokens=300)
+    kwargs = {"temperature": temperature} if temperature is not None else {}
+    response = client.chat_completion(messages=messages, model=model, max_tokens=300, **kwargs)
     return response.choices[0].message.content

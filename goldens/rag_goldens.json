@@ -1,0 +1,329 @@
+[
+  {
+    "id": "rag_01",
+    "question": "What percentage of Silverton Financial Corp's total assets is the commercial real estate loan portfolio?",
+    "expected_source": "doc_0332_silverton_risk.txt",
+    "doc_type": "risk",
+    "expected_output": "Silverton Financial Corp's commercial real estate loan portfolio is approximately 21% of total assets.",
+    "expected_numbers": [
+      "21"
+    ],
+    "ideal_context": [
+      "FORM 10-Q EXCERPT - RISK FACTORS\nRegistrant: Silverton Financial Corp\nFiling Period: Q1 2026\n\nItem 1A. Risk Factors.\nOur commercial real estate loan portfolio represents approximately 21% of total assets.\nNon-performing CRE loans stand at 2.8% of the CRE portfolio, compared to 1.26%\nin the prior quarter. We increased our allowance for credit losses by $23 million.\nConcentration risk in Southeast markets represents a material exposure. Management believes\ncurrent reserves are adequate but continued deterioration could require further provisions.\n"
+    ]
+  },
+  {
+    "id": "rag_02",
+    "question": "What settlement amount did Harborview Financial Corp disclose for regulatory inquiries?",
+    "expected_source": "doc_0155_harborview_litigation.txt",
+    "doc_type": "litigation",
+    "expected_output": "Harborview Financial Corp disclosed a settlement of $8 million related to regulatory inquiries.",
+    "expected_numbers": [
+      "8"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Harborview Financial Corp\nFiling Date: 2026-12-18\n\nItem 8.01 Other Events.\nHarborview Financial Corp disclosed a settlement of $8 million related to regulatory\ninquiries regarding disclosure timing. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 15 months.\nAn additional $4 million reserve was established for related matters.\n"
+    ]
+  },
+  {
+    "id": "rag_03",
+    "question": "What is Brightwater Regional Bank's target total CEO compensation?",
+    "expected_source": "doc_0405_brightwater_compensation.txt",
+    "doc_type": "compensation",
+    "expected_output": "Brightwater Regional Bank's target total CEO compensation is $5 million.",
+    "expected_numbers": [
+      "5"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Brightwater Regional Bank\nFiling Date: 2026-10-12\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 65% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $5 million, with maximum payout of $24 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n"
+    ]
+  },
+  {
+    "id": "rag_04",
+    "question": "What percentage of Ashcroft Holdings's total assets is the commercial real estate loan portfolio?",
+    "expected_source": "doc_0050_ashcroft_risk.txt",
+    "doc_type": "risk",
+    "expected_output": "Ashcroft Holdings's commercial real estate loan portfolio is approximately 11% of total assets.",
+    "expected_numbers": [
+      "11"
+    ],
+    "ideal_context": [
+      "FORM 10-Q EXCERPT - RISK FACTORS\nRegistrant: Ashcroft Holdings\nFiling Period: Q3 2026\n\nItem 1A. Risk Factors.\nOur commercial real estate loan portfolio represents approximately 11% of total assets.\nNon-performing CRE loans stand at 2.05% of the CRE portfolio, compared to 0.82%\nin the prior quarter. We increased our allowance for credit losses by $21 million.\nConcentration risk in Southeast markets represents a material exposure. Management believes\ncurrent reserves are adequate but continued deterioration could require further provisions.\n"
+    ]
+  },
+  {
+    "id": "rag_05",
+    "question": "What is Bluewater Regional Bank's target total CEO compensation?",
+    "expected_source": "doc_0075_bluewater_compensation.txt",
+    "doc_type": "compensation",
+    "expected_output": "Bluewater Regional Bank's target total CEO compensation is $8 million.",
+    "expected_numbers": [
+      "8"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Bluewater Regional Bank\nFiling Date: 2026-04-02\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 60% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.12 million.\nTarget total compensation is $8 million, with maximum payout of $16 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n"
+    ]
+  },
+  {
+    "id": "rag_06",
+    "question": "What is Crestline Capital Partners's target total CEO compensation?",
+    "expected_source": "doc_0549_crestline_compensation.txt",
+    "doc_type": "compensation",
+    "expected_output": "Crestline Capital Partners's target total CEO compensation is $5 million.",
+    "expected_numbers": [
+      "5"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Crestline Capital Partners\nFiling Date: 2026-10-24\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 50% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $5 million, with maximum payout of $14 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n"
+    ]
+  },
+  {
+    "id": "rag_07",
+    "question": "What was Northgate Capital Partners's quarterly net revenue?",
+    "expected_source": "doc_0097_northgate_earnings.txt",
+    "doc_type": "earnings",
+    "expected_output": "Northgate Capital Partners's quarterly net revenue was $829 million.",
+    "expected_numbers": [
+      "829"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Northgate Capital Partners\nFiling Date: 2026-02-12\n\nItem 2.02 Results of Operations and Financial Condition.\nNorthgate Capital Partners reported quarterly net revenue of $829 million, a -2% change year-over-year.\nOperating margin was 17%, compared to 24% in the prior year period.\nThe company recorded credit loss provisions of $25 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 10% for the following fiscal year, contingent on macroeconomic conditions.\n"
+    ]
+  },
+  {
+    "id": "rag_08",
+    "question": "What is Oakhaven Regional Bank's target total CEO compensation?",
+    "expected_source": "doc_0375_oakhaven_compensation.txt",
+    "doc_type": "compensation",
+    "expected_output": "Oakhaven Regional Bank's target total CEO compensation is $11 million.",
+    "expected_numbers": [
+      "11"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Oakhaven Regional Bank\nFiling Date: 2026-04-06\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 55% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.48 million.\nTarget total compensation is $11 million, with maximum payout of $22 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n"
+    ]
+  },
+  {
+    "id": "rag_09",
+    "question": "What is Summitvale Trust Company's target total CEO compensation?",
+    "expected_source": "doc_0597_summitvale_compensation.txt",
+    "doc_type": "compensation",
+    "expected_output": "Summitvale Trust Company's target total CEO compensation is $8 million.",
+    "expected_numbers": [
+      "8"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Summitvale Trust Company\nFiling Date: 2026-10-28\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 45% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $8 million, with maximum payout of $20 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n"
+    ]
+  },
+  {
+    "id": "rag_10",
+    "question": "What is Ashcroft Trust Company's revised full-year revenue guidance range?",
+    "expected_source": "doc_0060_ashcroft_guidance.txt",
+    "doc_type": "guidance",
+    "expected_output": "Ashcroft Trust Company projects full-year net revenue between $540 million and $580 million.",
+    "expected_numbers": [
+      "540",
+      "580"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - FORWARD GUIDANCE REVISION\nRegistrant: Ashcroft Trust Company\nFiling Date: 2026-01-13\n\nItem 2.02 Results of Operations and Financial Condition.\nAshcroft Trust Company revised full-year guidance, now projecting net revenue between\n$540 million and $580 million, versus prior guidance of $535 million\nto $590 million. The revision reflects softer loan demand. Expected full-year\noperating margin is 20%. Capital expenditure guidance is $30 million.\n"
+    ]
+  },
+  {
+    "id": "rag_11",
+    "question": "What company did Ironwood Capital Partners agree to acquire and what are the cost synergies?",
+    "expected_source": "doc_0520_ironwood_merger.txt",
+    "doc_type": "merger",
+    "expected_output": "Ironwood Capital Partners agreed to acquire Coastal Trust Bank, with estimated annual cost synergies of $24 million.",
+    "expected_numbers": [
+      "24"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - MATERIAL DEFINITIVE AGREEMENT\nRegistrant: Ironwood Capital Partners\nFiling Date: 2026-05-21\n\nItem 1.01 Entry into a Material Definitive Agreement.\nIronwood Capital Partners entered a definitive agreement to acquire Coastal Trust Bank for approximately\n$5880 million in an all-stock transaction, expected to close in Q1 2026\nsubject to regulatory approval. The combined entity would hold approximately\n$15.8 billion in total assets. Estimated annual cost synergies are\n$24 million, with the transaction accretive to EPS within 12 months.\n"
+    ]
+  },
+  {
+    "id": "rag_12",
+    "question": "What company did Fairmont Capital Partners agree to acquire and what are the cost synergies?",
+    "expected_source": "doc_0220_fairmont_merger.txt",
+    "doc_type": "merger",
+    "expected_output": "Fairmont Capital Partners agreed to acquire Granite State Bank, with estimated annual cost synergies of $32 million.",
+    "expected_numbers": [
+      "32"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - MATERIAL DEFINITIVE AGREEMENT\nRegistrant: Fairmont Capital Partners\nFiling Date: 2026-05-17\n\nItem 1.01 Entry into a Material Definitive Agreement.\nFairmont Capital Partners entered a definitive agreement to acquire Granite State Bank for approximately\n$2580 million in an all-stock transaction, expected to close in Q1 2026\nsubject to regulatory approval. The combined entity would hold approximately\n$6.0 billion in total assets. Estimated annual cost synergies are\n$32 million, with the transaction accretive to EPS within 12 months.\n"
+    ]
+  },
+  {
+    "id": "rag_13",
+    "question": "What is Ashcroft Capital Partners's target total CEO compensation?",
+    "expected_source": "doc_0039_ashcroft_compensation.txt",
+    "doc_type": "compensation",
+    "expected_output": "Ashcroft Capital Partners's target total CEO compensation is $8 million.",
+    "expected_numbers": [
+      "8"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Ashcroft Capital Partners\nFiling Date: 2026-04-06\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 55% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.48 million.\nTarget total compensation is $8 million, with maximum payout of $22 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n"
+    ]
+  },
+  {
+    "id": "rag_14",
+    "question": "What settlement amount did Bluewater Trust Company disclose for regulatory inquiries?",
+    "expected_source": "doc_0089_bluewater_litigation.txt",
+    "doc_type": "litigation",
+    "expected_output": "Bluewater Trust Company disclosed a settlement of $12 million related to regulatory inquiries.",
+    "expected_numbers": [
+      "12"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Bluewater Trust Company\nFiling Date: 2026-06-16\n\nItem 8.01 Other Events.\nBluewater Trust Company disclosed a settlement of $12 million related to regulatory\ninquiries regarding overdraft fee assessment. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $10 million reserve was established for related matters.\n"
+    ]
+  },
+  {
+    "id": "rag_15",
+    "question": "What was Kingsley Trust Company's quarterly net revenue?",
+    "expected_source": "doc_0445_kingsley_earnings.txt",
+    "doc_type": "earnings",
+    "expected_output": "Kingsley Trust Company's quarterly net revenue was $3265 million.",
+    "expected_numbers": [
+      "3265"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Kingsley Trust Company\nFiling Date: 2026-02-20\n\nItem 2.02 Results of Operations and Financial Condition.\nKingsley Trust Company reported quarterly net revenue of $3265 million, a 4% change year-over-year.\nOperating margin was 17%, compared to 20% in the prior year period.\nThe company recorded credit loss provisions of $13 million this quarter.\nDiluted earnings per share were $3.55. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n"
+    ]
+  },
+  {
+    "id": "rag_16",
+    "question": "What is Kingsley Capital Partners's target total CEO compensation?",
+    "expected_source": "doc_0429_kingsley_compensation.txt",
+    "doc_type": "compensation",
+    "expected_output": "Kingsley Capital Partners's target total CEO compensation is $11 million.",
+    "expected_numbers": [
+      "11"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Kingsley Capital Partners\nFiling Date: 2026-10-28\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 45% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $11 million, with maximum payout of $20 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n"
+    ]
+  },
+  {
+    "id": "rag_17",
+    "question": "What is Bluewater Capital Partners's revised full-year revenue guidance range?",
+    "expected_source": "doc_0072_bluewater_guidance.txt",
+    "doc_type": "guidance",
+    "expected_output": "Bluewater Capital Partners projects full-year net revenue between $612 million and $652 million.",
+    "expected_numbers": [
+      "612",
+      "652"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - FORWARD GUIDANCE REVISION\nRegistrant: Bluewater Capital Partners\nFiling Date: 2026-01-21\n\nItem 2.02 Results of Operations and Financial Condition.\nBluewater Capital Partners revised full-year guidance, now projecting net revenue between\n$612 million and $652 million, versus prior guidance of $607 million\nto $662 million. The revision reflects elevated credit costs. Expected full-year\noperating margin is 21%. Capital expenditure guidance is $42 million.\n"
+    ]
+  },
+  {
+    "id": "rag_18",
+    "question": "What was Calderwood Capital Partners's quarterly net revenue?",
+    "expected_source": "doc_0247_calderwood_earnings.txt",
+    "doc_type": "earnings",
+    "expected_output": "Calderwood Capital Partners's quarterly net revenue was $1879 million.",
+    "expected_numbers": [
+      "1879"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Calderwood Capital Partners\nFiling Date: 2026-08-14\n\nItem 2.02 Results of Operations and Financial Condition.\nCalderwood Capital Partners reported quarterly net revenue of $1879 million, a -4% change year-over-year.\nOperating margin was 23%, compared to 20% in the prior year period.\nThe company recorded credit loss provisions of $15 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n"
+    ]
+  },
+  {
+    "id": "rag_19",
+    "question": "What is Northgate Financial Corp's target total CEO compensation?",
+    "expected_source": "doc_0093_northgate_compensation.txt",
+    "doc_type": "compensation",
+    "expected_output": "Northgate Financial Corp's target total CEO compensation is $8 million.",
+    "expected_numbers": [
+      "8"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Northgate Financial Corp\nFiling Date: 2026-10-28\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 45% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $8 million, with maximum payout of $20 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n"
+    ]
+  },
+  {
+    "id": "rag_20",
+    "question": "What was Crestline Trust Company's quarterly net revenue?",
+    "expected_source": "doc_0565_crestline_earnings.txt",
+    "doc_type": "earnings",
+    "expected_output": "Crestline Trust Company's quarterly net revenue was $4105 million.",
+    "expected_numbers": [
+      "4105"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Crestline Trust Company\nFiling Date: 2026-02-16\n\nItem 2.02 Results of Operations and Financial Condition.\nCrestline Trust Company reported quarterly net revenue of $4105 million, a 10% change year-over-year.\nOperating margin was 17%, compared to 19% in the prior year period.\nThe company recorded credit loss provisions of $13 million this quarter.\nDiluted earnings per share were $3.55. Management guidance projects revenue growth\nof 10% for the following fiscal year, contingent on macroeconomic conditions.\n"
+    ]
+  },
+  {
+    "id": "rag_21",
+    "question": "What is Kingsley Regional Bank's target total CEO compensation?",
+    "expected_source": "doc_0435_kingsley_compensation.txt",
+    "doc_type": "compensation",
+    "expected_output": "Kingsley Regional Bank's target total CEO compensation is $8 million.",
+    "expected_numbers": [
+      "8"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Kingsley Regional Bank\nFiling Date: 2026-04-18\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 40% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.12 million.\nTarget total compensation is $8 million, with maximum payout of $12 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n"
+    ]
+  },
+  {
+    "id": "rag_22",
+    "question": "What was Bluewater Financial Corp's quarterly net revenue?",
+    "expected_source": "doc_0061_bluewater_earnings.txt",
+    "doc_type": "earnings",
+    "expected_output": "Bluewater Financial Corp's quarterly net revenue was $577 million.",
+    "expected_numbers": [
+      "577"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Bluewater Financial Corp\nFiling Date: 2026-02-16\n\nItem 2.02 Results of Operations and Financial Condition.\nBluewater Financial Corp reported quarterly net revenue of $577 million, a 0% change year-over-year.\nOperating margin was 17%, compared to 21% in the prior year period.\nThe company recorded credit loss provisions of $29 million this quarter.\nDiluted earnings per share were $0.91. Management guidance projects revenue growth\nof 10% for the following fiscal year, contingent on macroeconomic conditions.\n"
+    ]
+  },
+  {
+    "id": "rag_23",
+    "question": "What company did Summitvale Capital Partners agree to acquire and what are the cost synergies?",
+    "expected_source": "doc_0580_summitvale_merger.txt",
+    "doc_type": "merger",
+    "expected_output": "Summitvale Capital Partners agreed to acquire Granite State Bank, with estimated annual cost synergies of $28 million.",
+    "expected_numbers": [
+      "28"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - MATERIAL DEFINITIVE AGREEMENT\nRegistrant: Summitvale Capital Partners\nFiling Date: 2026-05-05\n\nItem 1.01 Entry into a Material Definitive Agreement.\nSummitvale Capital Partners entered a definitive agreement to acquire Granite State Bank for approximately\n$6540 million in an all-stock transaction, expected to close in Q1 2026\nsubject to regulatory approval. The combined entity would hold approximately\n$11.6 billion in total assets. Estimated annual cost synergies are\n$28 million, with the transaction accretive to EPS within 12 months.\n"
+    ]
+  },
+  {
+    "id": "rag_24",
+    "question": "What was Pinecrest Capital Partners's quarterly net revenue?",
+    "expected_source": "doc_0127_pinecrest_earnings.txt",
+    "doc_type": "earnings",
+    "expected_output": "Pinecrest Capital Partners's quarterly net revenue was $1039 million.",
+    "expected_numbers": [
+      "1039"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Pinecrest Capital Partners\nFiling Date: 2026-08-18\n\nItem 2.02 Results of Operations and Financial Condition.\nPinecrest Capital Partners reported quarterly net revenue of $1039 million, a 9% change year-over-year.\nOperating margin was 23%, compared to 21% in the prior year period.\nThe company recorded credit loss provisions of $15 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 4% for the following fiscal year, contingent on macroeconomic conditions.\n"
+    ]
+  },
+  {
+    "id": "rag_25",
+    "question": "What was Fairmont Holdings's quarterly net revenue?",
+    "expected_source": "doc_0229_fairmont_earnings.txt",
+    "doc_type": "earnings",
+    "expected_output": "Fairmont Holdings's quarterly net revenue was $1753 million.",
+    "expected_numbers": [
+      "1753"
+    ],
+    "ideal_context": [
+      "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Fairmont Holdings\nFiling Date: 2026-02-16\n\nItem 2.02 Results of Operations and Financial Condition.\nFairmont Holdings reported quarterly net revenue of $1753 million, a -3% change year-over-year.\nOperating margin was 17%, compared to 24% in the prior year period.\nThe company recorded credit loss provisions of $37 million this quarter.\nDiluted earnings per share were $2.89. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n"
+    ]
+  }
+]

@@ -1,0 +1,76 @@
+id,question,expected_output,answer,judge_correctness_score,judge_correctness_pass,judge_faithfulness_score,judge_faithfulness_pass,deterministic_key_facts_ok,human_correct,human_faithful,notes
+rag_01,What percentage of Silverton Financial Corp's total assets is the commercial real estate loan portfolio?,Silverton Financial Corp's commercial real estate loan portfolio is approximately 21% of total assets.,"
+
+According to [doc_0332_silverton_risk.txt], Silverton Financial Corp's commercial real estate loan portfolio represents approximately 21% of total assets.",1.0,1,1.0,1,1,,,
+rag_02,What settlement amount did Harborview Financial Corp disclose for regulatory inquiries?,Harborview Financial Corp disclosed a settlement of $8 million related to regulatory inquiries.,"
+
+$8 million [doc_0155_harborview_litigation.txt]",0.7,1,1.0,1,1,,,
+rag_03,What is Brightwater Regional Bank's target total CEO compensation?,Brightwater Regional Bank's target total CEO compensation is $5 million.,"
+
+According to [doc_0405_brightwater_compensation.txt], Brightwater Regional Bank's target total CEO compensation is $5 million.",1.0,1,1.0,1,1,,,
+rag_04,What percentage of Ashcroft Holdings's total assets is the commercial real estate loan portfolio?,Ashcroft Holdings's commercial real estate loan portfolio is approximately 11% of total assets.,"
+
+According to [doc_0050_ashcroft_risk.txt], Ashcroft Holdings' commercial real estate loan portfolio represents approximately 11% of total assets.",1.0,1,1.0,1,1,,,
+rag_05,What is Bluewater Regional Bank's target total CEO compensation?,Bluewater Regional Bank's target total CEO compensation is $8 million.,"
+
+$8 million [doc_0075_bluewater_compensation.txt]",0.8,1,1.0,1,1,,,
+rag_06,What is Crestline Capital Partners's target total CEO compensation?,Crestline Capital Partners's target total CEO compensation is $5 million.,"
+
+$5 million [doc_0549_crestline_compensation.txt]",0.8,1,1.0,1,1,,,
+rag_07,What was Northgate Capital Partners's quarterly net revenue?,Northgate Capital Partners's quarterly net revenue was $829 million.,"
+
+$829 million [doc_0097_northgate_earnings.txt]",0.8,1,0.0,0,1,,,
+rag_08,What is Oakhaven Regional Bank's target total CEO compensation?,Oakhaven Regional Bank's target total CEO compensation is $11 million.,"
+
+$11 million [doc_0375_oakhaven_compensation.txt]",0.8,1,1.0,1,1,,,
+rag_09,What is Summitvale Trust Company's target total CEO compensation?,Summitvale Trust Company's target total CEO compensation is $8 million.,"
+
+$8 million [doc_0597_summitvale_compensation.txt]",0.8,1,1.0,1,1,,,
+rag_10,What is Ashcroft Trust Company's revised full-year revenue guidance range?,Ashcroft Trust Company projects full-year net revenue between $540 million and $580 million.,"
+
+$540 million to $580 million [doc_0060_ashcroft_guidance.txt]",0.8,1,1.0,1,1,,,
+rag_11,What company did Ironwood Capital Partners agree to acquire and what are the cost synergies?,"Ironwood Capital Partners agreed to acquire Coastal Trust Bank, with estimated annual cost synergies of $24 million.","
+
+Ironwood Capital Partners agreed to acquire Coastal Trust Bank for approximately $5880 million in an all-stock transaction. The estimated annual cost synergies are $24 million.",1.0,1,1.0,1,1,,,
+rag_12,What company did Fairmont Capital Partners agree to acquire and what are the cost synergies?,"Fairmont Capital Partners agreed to acquire Granite State Bank, with estimated annual cost synergies of $32 million.","
+
+Fairmont Capital Partners agreed to acquire Granite State Bank for approximately $2580 million in an all-stock transaction. The estimated annual cost synergies are $32 million.",1.0,1,1.0,1,1,,,
+rag_13,What is Ashcroft Capital Partners's target total CEO compensation?,Ashcroft Capital Partners's target total CEO compensation is $8 million.,"
+
+$8 million [doc_0039_ashcroft_compensation.txt]",0.8,1,0.0,0,1,,,
+rag_14,What settlement amount did Bluewater Trust Company disclose for regulatory inquiries?,Bluewater Trust Company disclosed a settlement of $12 million related to regulatory inquiries.,"
+
+$12 million [doc_0089_bluewater_litigation.txt]",0.7,1,1.0,1,1,,,
+rag_15,What was Kingsley Trust Company's quarterly net revenue?,Kingsley Trust Company's quarterly net revenue was $3265 million.,"
+
+$3265 million [doc_0445_kingsley_earnings.txt]",0.7,1,1.0,1,1,,,
+rag_16,What is Kingsley Capital Partners's target total CEO compensation?,Kingsley Capital Partners's target total CEO compensation is $11 million.,"
+
+$11 million [doc_0429_kingsley_compensation.txt]",0.8,1,1.0,1,1,,,
+rag_17,What is Bluewater Capital Partners's revised full-year revenue guidance range?,Bluewater Capital Partners projects full-year net revenue between $612 million and $652 million.,"
+
+$612 million to $652 million [doc_0072_bluewater_guidance.txt]",0.8,1,1.0,1,1,,,
+rag_18,What was Calderwood Capital Partners's quarterly net revenue?,Calderwood Capital Partners's quarterly net revenue was $1879 million.,"
+
+$1879 million [doc_0247_calderwood_earnings.txt]",0.9,1,1.0,1,1,,,
+rag_19,What is Northgate Financial Corp's target total CEO compensation?,Northgate Financial Corp's target total CEO compensation is $8 million.,"
+
+$8 million [doc_0093_northgate_compensation.txt]",0.8,1,1.0,1,1,,,
+rag_20,What was Crestline Trust Company's quarterly net revenue?,Crestline Trust Company's quarterly net revenue was $4105 million.,"
+
+$4105 million [doc_0565_crestline_earnings.txt]",0.9,1,1.0,1,1,,,
+rag_21,What is Kingsley Regional Bank's target total CEO compensation?,Kingsley Regional Bank's target total CEO compensation is $8 million.,"
+
+$8 million [doc_0435_kingsley_compensation.txt]",0.7,1,1.0,1,1,,,
+rag_22,What was Bluewater Financial Corp's quarterly net revenue?,Bluewater Financial Corp's quarterly net revenue was $577 million.,"
+
+$577 million [doc_0061_bluewater_earnings.txt]",0.8,1,1.0,1,1,,,
+rag_23,What company did Summitvale Capital Partners agree to acquire and what are the cost synergies?,"Summitvale Capital Partners agreed to acquire Granite State Bank, with estimated annual cost synergies of $28 million.","
+
+Summitvale Capital Partners agreed to acquire Granite State Bank for approximately $6540 million in an all-stock transaction. The estimated annual cost synergies are $28 million.",1.0,1,1.0,1,1,,,
+rag_24,What was Pinecrest Capital Partners's quarterly net revenue?,Pinecrest Capital Partners's quarterly net revenue was $1039 million.,"
+
+$1039 million [doc_0127_pinecrest_earnings.txt]",0.8,1,1.0,1,1,,,
+rag_25,What was Fairmont Holdings's quarterly net revenue?,Fairmont Holdings's quarterly net revenue was $1753 million.,"
+
+$1753 million [doc_0229_fairmont_earnings.txt]",0.8,1,0.0,0,1,,,

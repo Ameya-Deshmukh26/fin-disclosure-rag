@@ -1,0 +1,29 @@
+{
+  "faithfulness": {
+    "n": 25,
+    "avg_score_run1": 0.88,
+    "avg_score_run2": 0.92,
+    "avg_delta_of_means": 0.04,
+    "mean_case_delta": 0.12,
+    "max_case_delta": 1.0,
+    "pass_fail_flips": 3
+  },
+  "answer_relevancy": {
+    "n": 25,
+    "avg_score_run1": 0.99,
+    "avg_score_run2": 1.0,
+    "avg_delta_of_means": 0.01,
+    "mean_case_delta": 0.01,
+    "max_case_delta": 0.25,
+    "pass_fail_flips": 0
+  },
+  "correctness": {
+    "n": 25,
+    "avg_score_run1": 0.84,
+    "avg_score_run2": 0.824,
+    "avg_delta_of_means": 0.016,
+    "mean_case_delta": 0.032,
+    "max_case_delta": 0.1,
+    "pass_fail_flips": 2
+  }
+}

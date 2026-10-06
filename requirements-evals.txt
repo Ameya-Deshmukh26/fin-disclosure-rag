@@ -1,0 +1,10 @@
+deepeval>=4.1
+sentence-transformers
+rank-bm25
+langchain-text-splitters
+huggingface_hub
+python-dotenv
+numpy
+pytest
+mlflow
+boto3

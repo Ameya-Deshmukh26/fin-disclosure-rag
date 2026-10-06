@@ -1,0 +1,45 @@
+name: evals
+
+on:
+  push:
+    paths: ["evals/**", "tests/**", "goldens/**", "generate.py", "hybrid.py", "retrieval.py"]
+  pull_request:
+  workflow_dispatch:   # full suite with real model calls: run on demand
+
+jobs:
+  offline:
+    # Tests for the eval code itself: no network, no keys, runs on every push.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pytest deepeval python-dotenv
+      - run: pytest tests/test_evals_offline.py -q
+
+  full-suite:
+    # Real generator + judge calls. Fails the job if any GATE regresses vs baseline.
+    if: github.event_name == 'workflow_dispatch'
+    needs: offline
+    runs-on: ubuntu-latest
+    env:
+      # Generator and judge run on Amazon Bedrock (see evals/config.py)
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: us-east-1
+      DEEPEVAL_TELEMETRY_OPT_OUT: "YES"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements-evals.txt boto3
+      - run: python build_index_big.py          # index_big.pkl is not committed
+      - run: python goldens/build_goldens.py
+      - run: python -m evals.run_suite           # exit 1 on a gate regression
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-results
+          path: results/latest.json

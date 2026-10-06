@@ -1,0 +1,2075 @@
+{
+  "meta": {
+    "generator": "bedrock:us.meta.llama3-1-8b-instruct-v1:0",
+    "judge": "bedrock:us.amazon.nova-pro-v1:0",
+    "timestamp": "2026-10-05T21:14:55",
+    "n_rag": 25,
+    "n_refusal": 10
+  },
+  "summary": {
+    "retrieval.hit_at_5": 100.0,
+    "retrieval.mrr": 1.0,
+    "retrieval.context_recall_at_3": 100.0,
+    "rag.citations_valid_rate": 88.0,
+    "rag.cites_expected_rate": 88.0,
+    "rag.number_lock_rate": 100.0,
+    "rag.key_facts_rate": 100.0,
+    "rag.false_refusal_rate": 0.0,
+    "generator.number_lock_rate": 100.0,
+    "generator.key_facts_rate": 100.0,
+    "safety.refusal_rate": 100.0,
+    "ops.latency.generate_p50_ms": 345.56140000131563,
+    "ops.latency.generate_p95_ms": 516.8197000002692,
+    "ops.latency.retrieve_p50_ms": 68.84009999885166,
+    "ops.generator_input_tokens": 22160,
+    "ops.generator_output_tokens": 1163,
+    "rag.faithfulness.avg_score": 0.88,
+    "rag.faithfulness.pass_rate": 88.0,
+    "rag.answer_relevancy.avg_score": 0.99,
+    "rag.answer_relevancy.pass_rate": 100.0,
+    "rag.correctness.avg_score": 0.84,
+    "rag.correctness.pass_rate": 100.0,
+    "rag.faithfulness_answered.avg_score": 0.88,
+    "generator.faithfulness.avg_score": 0.86,
+    "generator.faithfulness.pass_rate": 80.0,
+    "ops.judge_calls": 300,
+    "ops.judge_input_tokens": 116204,
+    "ops.judge_output_tokens": 20808,
+    "ops.judge_errors": 0
+  },
+  "cases": {
+    "retrieval": [
+      {
+        "id": "rag_01",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_02",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_03",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_04",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_05",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_06",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_07",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_08",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_09",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_10",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_11",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_12",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_13",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_14",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_15",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_16",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_17",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_18",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_19",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_20",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_21",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_22",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_23",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_24",
+        "rank": 1,
+        "in_context": true
+      },
+      {
+        "id": "rag_25",
+        "rank": 1,
+        "in_context": true
+      }
+    ],
+    "rag": [
+      {
+        "id": "rag_01",
+        "question": "What percentage of Silverton Financial Corp's total assets is the commercial real estate loan portfolio?",
+        "expected_output": "Silverton Financial Corp's commercial real estate loan portfolio is approximately 21% of total assets.",
+        "expected_source": "doc_0332_silverton_risk.txt",
+        "answer": "\n\nAccording to [doc_0332_silverton_risk.txt], Silverton Financial Corp's commercial real estate loan portfolio represents approximately 21% of total assets.",
+        "retrieved_sources": [
+          "doc_0332_silverton_risk.txt",
+          "doc_0336_silverton_guidance.txt",
+          "doc_0334_silverton_merger.txt",
+          "doc_0335_silverton_litigation.txt",
+          "doc_0331_silverton_earnings.txt"
+        ],
+        "context_sources": [
+          "doc_0332_silverton_risk.txt",
+          "doc_0336_silverton_guidance.txt",
+          "doc_0334_silverton_merger.txt"
+        ],
+        "contexts": [
+          "FORM 10-Q EXCERPT - RISK FACTORS\nRegistrant: Silverton Financial Corp\nFiling Period: Q1 2026\n\nItem 1A. Risk Factors.\nOur commercial real estate loan portfolio represents approximately 21% of total assets.\nNon-performing CRE loans stand at 2.8% of the CRE portfolio, compared to 1.26%\nin the prior quarter. We increased our allowance for credit losses by $23 million.\nConcentration risk in Southeast markets represents a material exposure. Management believes\ncurrent reserves are adequate but continued deterioration could require further provisions.\n",
+          "FORM 8-K EXCERPT - FORWARD GUIDANCE REVISION\nRegistrant: Silverton Financial Corp\nFiling Date: 2026-01-01\n\nItem 2.02 Results of Operations and Financial Condition.\nSilverton Financial Corp revised full-year guidance, now projecting net revenue between\n$2196 million and $2236 million, versus prior guidance of $2191 million\nto $2246 million. The revision reflects improved net interest margin. Expected full-year\noperating margin is 21%. Capital expenditure guidance is $56 million.\n",
+          "FORM 8-K EXCERPT - MATERIAL DEFINITIVE AGREEMENT\nRegistrant: Silverton Financial Corp\nFiling Date: 2026-11-23\n\nItem 1.01 Entry into a Material Definitive Agreement.\nSilverton Financial Corp entered a definitive agreement to acquire Cedar Valley Trust for approximately\n$3834 million in an all-stock transaction, expected to close in Q3 2026\nsubject to regulatory approval. The combined entity would hold approximately\n$8.8 billion in total assets. Estimated annual cost synergies are\n$34 million, with the transaction accretive to EPS within 24 months.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 64.63590000021213,
+          "generate": 3711.3591999986966
+        },
+        "cited": [
+          "doc_0332_silverton_risk.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about the percentage of Silverton Financial Corp's total assets that the commercial real estate loan portfolio represents, with no irrelevant information included."
+          },
+          "correctness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The actual output correctly identifies the company name, counterparty, and the percentage of the commercial real estate loan portfolio relative to total assets. It aligns well with the expected output in terms of facts and values. The only difference is the inclusion of the source document, which is not penalized according to the evaluation steps. Therefore, the response is in strong alignment with the evaluation steps."
+          }
+        }
+      },
+      {
+        "id": "rag_02",
+        "question": "What settlement amount did Harborview Financial Corp disclose for regulatory inquiries?",
+        "expected_output": "Harborview Financial Corp disclosed a settlement of $8 million related to regulatory inquiries.",
+        "expected_source": "doc_0155_harborview_litigation.txt",
+        "answer": "\n\n$8 million [doc_0155_harborview_litigation.txt]",
+        "retrieved_sources": [
+          "doc_0155_harborview_litigation.txt",
+          "doc_0153_harborview_compensation.txt",
+          "doc_0151_harborview_earnings.txt",
+          "doc_0152_harborview_risk.txt",
+          "doc_0156_harborview_guidance.txt",
+          "doc_0154_harborview_merger.txt"
+        ],
+        "context_sources": [
+          "doc_0155_harborview_litigation.txt",
+          "doc_0153_harborview_compensation.txt",
+          "doc_0151_harborview_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Harborview Financial Corp\nFiling Date: 2026-12-18\n\nItem 8.01 Other Events.\nHarborview Financial Corp disclosed a settlement of $8 million related to regulatory\ninquiries regarding disclosure timing. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 15 months.\nAn additional $4 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Harborview Financial Corp\nFiling Date: 2026-10-12\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 65% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $0.94 million.\nTarget total compensation is $5 million, with maximum payout of $24 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Harborview Financial Corp\nFiling Date: 2026-08-06\n\nItem 2.02 Results of Operations and Financial Condition.\nHarborview Financial Corp reported quarterly net revenue of $1207 million, a 14% change year-over-year.\nOperating margin was 23%, compared to 23% in the prior year period.\nThe company recorded credit loss provisions of $39 million this quarter.\nDiluted earnings per share were $0.91. Management guidance projects revenue growth\nof 10% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 58.25650000042515,
+          "generate": 258.70149999900605
+        },
+        "cited": [
+          "doc_0155_harborview_litigation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions or discrepancies."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the settlement amount disclosed by Harborview Financial Corp for regulatory inquiries, with no irrelevant information included."
+          },
+          "correctness": {
+            "score": 0.7,
+            "success": true,
+            "reason": "The actual output correctly identifies the settlement amount of $8 million, which aligns with the expected output. However, it lacks the company name and the context of regulatory inquiries, which are present in the expected output. Despite this, the core fact about the settlement amount is accurately stated, and there are no contradictions or irrelevant details. The score reflects the partial alignment with the expected output due to the missing context and company name."
+          }
+        }
+      },
+      {
+        "id": "rag_03",
+        "question": "What is Brightwater Regional Bank's target total CEO compensation?",
+        "expected_output": "Brightwater Regional Bank's target total CEO compensation is $5 million.",
+        "expected_source": "doc_0405_brightwater_compensation.txt",
+        "answer": "\n\nAccording to [doc_0405_brightwater_compensation.txt], Brightwater Regional Bank's target total CEO compensation is $5 million.",
+        "retrieved_sources": [
+          "doc_0405_brightwater_compensation.txt",
+          "doc_0407_brightwater_litigation.txt",
+          "doc_0403_brightwater_earnings.txt",
+          "doc_0404_brightwater_risk.txt",
+          "doc_0406_brightwater_merger.txt",
+          "doc_0408_brightwater_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0405_brightwater_compensation.txt",
+          "doc_0407_brightwater_litigation.txt",
+          "doc_0403_brightwater_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Brightwater Regional Bank\nFiling Date: 2026-10-12\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 65% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $5 million, with maximum payout of $24 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Brightwater Regional Bank\nFiling Date: 2026-12-18\n\nItem 8.01 Other Events.\nBrightwater Regional Bank disclosed a settlement of $36 million related to regulatory\ninquiries regarding disclosure timing. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 15 months.\nAn additional $4 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Brightwater Regional Bank\nFiling Date: 2026-08-06\n\nItem 2.02 Results of Operations and Financial Condition.\nBrightwater Regional Bank reported quarterly net revenue of $2971 million, a 0% change year-over-year.\nOperating margin was 23%, compared to 22% in the prior year period.\nThe company recorded credit loss provisions of $11 million this quarter.\nDiluted earnings per share were $2.23. Management guidance projects revenue growth\nof 10% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 58.25829999957932,
+          "generate": 345.56140000131563
+        },
+        "cited": [
+          "doc_0405_brightwater_compensation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate output."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the input query without any irrelevant information."
+          },
+          "correctness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The actual output correctly identifies the company name, counterparty, and number as specified in the expected output. It also includes the source document, which is not penalized according to the evaluation steps. The only difference is the inclusion of the source document, which is allowed as per step 5."
+          }
+        }
+      },
+      {
+        "id": "rag_04",
+        "question": "What percentage of Ashcroft Holdings's total assets is the commercial real estate loan portfolio?",
+        "expected_output": "Ashcroft Holdings's commercial real estate loan portfolio is approximately 11% of total assets.",
+        "expected_source": "doc_0050_ashcroft_risk.txt",
+        "answer": "\n\nAccording to [doc_0050_ashcroft_risk.txt], Ashcroft Holdings' commercial real estate loan portfolio represents approximately 11% of total assets.",
+        "retrieved_sources": [
+          "doc_0050_ashcroft_risk.txt",
+          "doc_0053_ashcroft_litigation.txt",
+          "doc_0054_ashcroft_guidance.txt",
+          "doc_0052_ashcroft_merger.txt",
+          "doc_0049_ashcroft_earnings.txt"
+        ],
+        "context_sources": [
+          "doc_0050_ashcroft_risk.txt",
+          "doc_0053_ashcroft_litigation.txt",
+          "doc_0054_ashcroft_guidance.txt"
+        ],
+        "contexts": [
+          "FORM 10-Q EXCERPT - RISK FACTORS\nRegistrant: Ashcroft Holdings\nFiling Period: Q3 2026\n\nItem 1A. Risk Factors.\nOur commercial real estate loan portfolio represents approximately 11% of total assets.\nNon-performing CRE loans stand at 2.05% of the CRE portfolio, compared to 0.82%\nin the prior quarter. We increased our allowance for credit losses by $21 million.\nConcentration risk in Southeast markets represents a material exposure. Management believes\ncurrent reserves are adequate but continued deterioration could require further provisions.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Ashcroft Holdings\nFiling Date: 2026-06-20\n\nItem 8.01 Other Events.\nAshcroft Holdings disclosed a settlement of $8 million related to regulatory\ninquiries regarding anti-money-laundering controls. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $10 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - FORWARD GUIDANCE REVISION\nRegistrant: Ashcroft Holdings\nFiling Date: 2026-07-23\n\nItem 2.02 Results of Operations and Financial Condition.\nAshcroft Holdings revised full-year guidance, now projecting net revenue between\n$504 million and $544 million, versus prior guidance of $499 million\nto $554 million. The revision reflects integration expenses from recent acquisitions. Expected full-year\noperating margin is 25%. Capital expenditure guidance is $24 million.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 63.90569999894069,
+          "generate": 447.53359999958775
+        },
+        "cited": [
+          "doc_0050_ashcroft_risk.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions or discrepancies."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about the percentage of Ashcroft Holdings's total assets that the commercial real estate loan portfolio represents, with no irrelevant information included."
+          },
+          "correctness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The actual output correctly identifies the company name, counterparty, and percentage, aligning with the expected output. It provides additional information (source citation) which is not penalized according to the evaluation steps. The response is clear, accurate, and directly answers the question asked."
+          }
+        }
+      },
+      {
+        "id": "rag_05",
+        "question": "What is Bluewater Regional Bank's target total CEO compensation?",
+        "expected_output": "Bluewater Regional Bank's target total CEO compensation is $8 million.",
+        "expected_source": "doc_0075_bluewater_compensation.txt",
+        "answer": "\n\n$8 million [doc_0075_bluewater_compensation.txt]",
+        "retrieved_sources": [
+          "doc_0075_bluewater_compensation.txt",
+          "doc_0077_bluewater_litigation.txt",
+          "doc_0073_bluewater_earnings.txt",
+          "doc_0074_bluewater_risk.txt",
+          "doc_0076_bluewater_merger.txt",
+          "doc_0078_bluewater_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0075_bluewater_compensation.txt",
+          "doc_0077_bluewater_litigation.txt",
+          "doc_0073_bluewater_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Bluewater Regional Bank\nFiling Date: 2026-04-02\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 60% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.12 million.\nTarget total compensation is $8 million, with maximum payout of $16 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Bluewater Regional Bank\nFiling Date: 2026-06-08\n\nItem 8.01 Other Events.\nBluewater Regional Bank disclosed a settlement of $22 million related to regulatory\ninquiries regarding loan servicing practices. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $7 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Bluewater Regional Bank\nFiling Date: 2026-02-24\n\nItem 2.02 Results of Operations and Financial Condition.\nBluewater Regional Bank reported quarterly net revenue of $661 million, a 12% change year-over-year.\nOperating margin was 17%, compared to 22% in the prior year period.\nThe company recorded credit loss provisions of $41 million this quarter.\nDiluted earnings per share were $2.23. Management guidance projects revenue growth\nof 4% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 137.249299999894,
+          "generate": 315.0444000002608
+        },
+        "cited": [
+          "doc_0075_bluewater_compensation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate representation of the retrieval context."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the query about Bluewater Regional Bank's target total CEO compensation without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the target total CEO compensation of $8 million, which aligns with the expected output. However, it does not explicitly state that this is Bluewater Regional Bank's target total CEO compensation, which is a required fact according to the expected output. Despite this, the response is close to the expected output and provides the necessary information, though not in the complete form requested."
+          }
+        }
+      },
+      {
+        "id": "rag_06",
+        "question": "What is Crestline Capital Partners's target total CEO compensation?",
+        "expected_output": "Crestline Capital Partners's target total CEO compensation is $5 million.",
+        "expected_source": "doc_0549_crestline_compensation.txt",
+        "answer": "\n\n$5 million [doc_0549_crestline_compensation.txt]",
+        "retrieved_sources": [
+          "doc_0549_crestline_compensation.txt",
+          "doc_0551_crestline_litigation.txt",
+          "doc_0547_crestline_earnings.txt",
+          "doc_0548_crestline_risk.txt",
+          "doc_0552_crestline_guidance.txt",
+          "doc_0550_crestline_merger.txt"
+        ],
+        "context_sources": [
+          "doc_0549_crestline_compensation.txt",
+          "doc_0551_crestline_litigation.txt",
+          "doc_0547_crestline_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Crestline Capital Partners\nFiling Date: 2026-10-24\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 50% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $5 million, with maximum payout of $14 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Crestline Capital Partners\nFiling Date: 2026-12-02\n\nItem 8.01 Other Events.\nCrestline Capital Partners disclosed a settlement of $18 million related to regulatory\ninquiries regarding overdraft fee assessment. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 15 months.\nAn additional $4 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Crestline Capital Partners\nFiling Date: 2026-08-18\n\nItem 2.02 Results of Operations and Financial Condition.\nCrestline Capital Partners reported quarterly net revenue of $3979 million, a 11% change year-over-year.\nOperating margin was 23%, compared to 23% in the prior year period.\nThe company recorded credit loss provisions of $35 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 10% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 98.09189999941736,
+          "generate": 369.00620000051276
+        },
+        "cited": [
+          "doc_0549_crestline_compensation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about Crestline Capital Partners's target total CEO compensation without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the target total CEO compensation for Crestline Capital Partners as $5 million, which aligns with the expected output. However, it does not explicitly state the company name in the sentence, which is a minor shortcoming. The citation is acceptable and does not affect the score. Overall, the response is mostly aligned with the evaluation steps but lacks the full context of the company name."
+          }
+        }
+      },
+      {
+        "id": "rag_07",
+        "question": "What was Northgate Capital Partners's quarterly net revenue?",
+        "expected_output": "Northgate Capital Partners's quarterly net revenue was $829 million.",
+        "expected_source": "doc_0097_northgate_earnings.txt",
+        "answer": "\n\n$829 million [doc_0097_northgate_earnings.txt]",
+        "retrieved_sources": [
+          "doc_0097_northgate_earnings.txt",
+          "doc_0099_northgate_compensation.txt",
+          "doc_0101_northgate_litigation.txt",
+          "doc_0098_northgate_risk.txt",
+          "doc_0102_northgate_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0097_northgate_earnings.txt",
+          "doc_0099_northgate_compensation.txt",
+          "doc_0101_northgate_litigation.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Northgate Capital Partners\nFiling Date: 2026-02-12\n\nItem 2.02 Results of Operations and Financial Condition.\nNorthgate Capital Partners reported quarterly net revenue of $829 million, a -2% change year-over-year.\nOperating margin was 17%, compared to 24% in the prior year period.\nThe company recorded credit loss provisions of $25 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 10% for the following fiscal year, contingent on macroeconomic conditions.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Northgate Capital Partners\nFiling Date: 2026-04-18\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 40% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.12 million.\nTarget total compensation is $5 million, with maximum payout of $12 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Northgate Capital Partners\nFiling Date: 2026-06-24\n\nItem 8.01 Other Events.\nNorthgate Capital Partners disclosed a settlement of $36 million related to regulatory\ninquiries regarding fee structures. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $4 million reserve was established for related matters.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 73.5532000016974,
+          "generate": 299.4593999992503
+        },
+        "cited": [
+          "doc_0097_northgate_earnings.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 0.0,
+            "success": false,
+            "reason": "The score is 0.00 because the actual output incorrectly states earnings instead of net revenue as reported in the document."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about Northgate Capital Partners's quarterly net revenue without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the quarterly net revenue of Northgate Capital Partners as $829 million, which aligns with the expected output. However, it lacks the explicit statement that this is Northgate Capital Partners's quarterly net revenue, which is present in the expected output. Despite this, the core fact is accurately represented, and the citation is appropriate. The absence of the full statement slightly detracts from clarity but does not contradict any facts."
+          }
+        }
+      },
+      {
+        "id": "rag_08",
+        "question": "What is Oakhaven Regional Bank's target total CEO compensation?",
+        "expected_output": "Oakhaven Regional Bank's target total CEO compensation is $11 million.",
+        "expected_source": "doc_0375_oakhaven_compensation.txt",
+        "answer": "\n\n$11 million [doc_0375_oakhaven_compensation.txt]",
+        "retrieved_sources": [
+          "doc_0375_oakhaven_compensation.txt",
+          "doc_0377_oakhaven_litigation.txt",
+          "doc_0373_oakhaven_earnings.txt",
+          "doc_0374_oakhaven_risk.txt",
+          "doc_0376_oakhaven_merger.txt",
+          "doc_0378_oakhaven_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0375_oakhaven_compensation.txt",
+          "doc_0377_oakhaven_litigation.txt",
+          "doc_0373_oakhaven_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Oakhaven Regional Bank\nFiling Date: 2026-04-06\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 55% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.48 million.\nTarget total compensation is $11 million, with maximum payout of $22 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Oakhaven Regional Bank\nFiling Date: 2026-06-12\n\nItem 8.01 Other Events.\nOakhaven Regional Bank disclosed a settlement of $10 million related to regulatory\ninquiries regarding mortgage underwriting standards. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $10 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Oakhaven Regional Bank\nFiling Date: 2026-02-28\n\nItem 2.02 Results of Operations and Financial Condition.\nOakhaven Regional Bank reported quarterly net revenue of $2761 million, a 8% change year-over-year.\nOperating margin was 17%, compared to 25% in the prior year period.\nThe company recorded credit loss provisions of $21 million this quarter.\nDiluted earnings per share were $2.23. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 137.55480000145326,
+          "generate": 509.5607999992353
+        },
+        "cited": [
+          "doc_0375_oakhaven_compensation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the query about Oakhaven Regional Bank's target total CEO compensation without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the target total CEO compensation of $11 million, which aligns with the expected output. However, it lacks the explicit mention of 'Oakhaven Regional Bank' and the phrase 'target total CEO compensation', which are present in the expected output. Despite this, the core fact is accurately represented, and no contradictory or irrelevant information is included."
+          }
+        }
+      },
+      {
+        "id": "rag_09",
+        "question": "What is Summitvale Trust Company's target total CEO compensation?",
+        "expected_output": "Summitvale Trust Company's target total CEO compensation is $8 million.",
+        "expected_source": "doc_0597_summitvale_compensation.txt",
+        "answer": "\n\n$8 million [doc_0597_summitvale_compensation.txt]",
+        "retrieved_sources": [
+          "doc_0597_summitvale_compensation.txt",
+          "doc_0599_summitvale_litigation.txt",
+          "doc_0595_summitvale_earnings.txt",
+          "doc_0596_summitvale_risk.txt",
+          "doc_0598_summitvale_merger.txt",
+          "doc_0600_summitvale_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0597_summitvale_compensation.txt",
+          "doc_0599_summitvale_litigation.txt",
+          "doc_0595_summitvale_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Summitvale Trust Company\nFiling Date: 2026-10-28\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 45% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $8 million, with maximum payout of $20 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Summitvale Trust Company\nFiling Date: 2026-12-06\n\nItem 8.01 Other Events.\nSummitvale Trust Company disclosed a settlement of $12 million related to regulatory\ninquiries regarding anti-money-laundering controls. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 15 months.\nAn additional $7 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Summitvale Trust Company\nFiling Date: 2026-08-22\n\nItem 2.02 Results of Operations and Financial Condition.\nSummitvale Trust Company reported quarterly net revenue of $4315 million, a 2% change year-over-year.\nOperating margin was 23%, compared to 16% in the prior year period.\nThe company recorded credit loss provisions of $43 million this quarter.\nDiluted earnings per share were $3.55. Management guidance projects revenue growth\nof 4% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 56.91509999996924,
+          "generate": 279.05960000134655
+        },
+        "cited": [
+          "doc_0597_summitvale_compensation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate actual output."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the input query without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the target total CEO compensation of Summitvale Trust Company as $8 million, which aligns with the expected output. However, it lacks the explicit mention of the company's name and the phrase 'target total CEO compensation', which are present in the expected output. Despite this, the core fact is accurately stated, and no contradictory or irrelevant information is included."
+          }
+        }
+      },
+      {
+        "id": "rag_10",
+        "question": "What is Ashcroft Trust Company's revised full-year revenue guidance range?",
+        "expected_output": "Ashcroft Trust Company projects full-year net revenue between $540 million and $580 million.",
+        "expected_source": "doc_0060_ashcroft_guidance.txt",
+        "answer": "\n\n$540 million to $580 million [doc_0060_ashcroft_guidance.txt]",
+        "retrieved_sources": [
+          "doc_0060_ashcroft_guidance.txt",
+          "doc_0057_ashcroft_compensation.txt",
+          "doc_0059_ashcroft_litigation.txt",
+          "doc_0055_ashcroft_earnings.txt",
+          "doc_0056_ashcroft_risk.txt"
+        ],
+        "context_sources": [
+          "doc_0060_ashcroft_guidance.txt",
+          "doc_0057_ashcroft_compensation.txt",
+          "doc_0059_ashcroft_litigation.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - FORWARD GUIDANCE REVISION\nRegistrant: Ashcroft Trust Company\nFiling Date: 2026-01-13\n\nItem 2.02 Results of Operations and Financial Condition.\nAshcroft Trust Company revised full-year guidance, now projecting net revenue between\n$540 million and $580 million, versus prior guidance of $535 million\nto $590 million. The revision reflects softer loan demand. Expected full-year\noperating margin is 20%. Capital expenditure guidance is $30 million.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Ashcroft Trust Company\nFiling Date: 2026-10-04\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 40% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $0.94 million.\nTarget total compensation is $8 million, with maximum payout of $12 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Ashcroft Trust Company\nFiling Date: 2026-12-10\n\nItem 8.01 Other Events.\nAshcroft Trust Company disclosed a settlement of $20 million related to regulatory\ninquiries regarding fee structures. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 15 months.\nAn additional $7 million reserve was established for related matters.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 85.33729999908246,
+          "generate": 395.916200001011
+        },
+        "cited": [
+          "doc_0060_ashcroft_guidance.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about Ashcroft Trust Company's revised full-year revenue guidance range without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the revised full-year revenue guidance range of $540 million to $580 million, which aligns with the expected output. However, it lacks the explicit mention of 'Ashcroft Trust Company' and the phrase 'projects full-year net revenue,' which are present in the expected output. Despite this, the core fact is accurately stated, and no contradictory or irrelevant information is included."
+          }
+        }
+      },
+      {
+        "id": "rag_11",
+        "question": "What company did Ironwood Capital Partners agree to acquire and what are the cost synergies?",
+        "expected_output": "Ironwood Capital Partners agreed to acquire Coastal Trust Bank, with estimated annual cost synergies of $24 million.",
+        "expected_source": "doc_0520_ironwood_merger.txt",
+        "answer": "\n\nIronwood Capital Partners agreed to acquire Coastal Trust Bank for approximately $5880 million in an all-stock transaction. The estimated annual cost synergies are $24 million.",
+        "retrieved_sources": [
+          "doc_0520_ironwood_merger.txt",
+          "doc_0522_ironwood_guidance.txt",
+          "doc_0517_ironwood_earnings.txt",
+          "doc_0519_ironwood_compensation.txt",
+          "doc_0521_ironwood_litigation.txt"
+        ],
+        "context_sources": [
+          "doc_0520_ironwood_merger.txt",
+          "doc_0522_ironwood_guidance.txt",
+          "doc_0517_ironwood_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - MATERIAL DEFINITIVE AGREEMENT\nRegistrant: Ironwood Capital Partners\nFiling Date: 2026-05-21\n\nItem 1.01 Entry into a Material Definitive Agreement.\nIronwood Capital Partners entered a definitive agreement to acquire Coastal Trust Bank for approximately\n$5880 million in an all-stock transaction, expected to close in Q1 2026\nsubject to regulatory approval. The combined entity would hold approximately\n$15.8 billion in total assets. Estimated annual cost synergies are\n$24 million, with the transaction accretive to EPS within 12 months.\n",
+          "FORM 8-K EXCERPT - FORWARD GUIDANCE REVISION\nRegistrant: Ironwood Capital Partners\nFiling Date: 2026-07-27\n\nItem 2.02 Results of Operations and Financial Condition.\nIronwood Capital Partners revised full-year guidance, now projecting net revenue between\n$3312 million and $3352 million, versus prior guidance of $3307 million\nto $3362 million. The revision reflects elevated credit costs. Expected full-year\noperating margin is 20%. Capital expenditure guidance is $42 million.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Ironwood Capital Partners\nFiling Date: 2026-02-12\n\nItem 2.02 Results of Operations and Financial Condition.\nIronwood Capital Partners reported quarterly net revenue of $3769 million, a 0% change year-over-year.\nOperating margin was 17%, compared to 15% in the prior year period.\nThe company recorded credit loss provisions of $45 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 68.84009999885166,
+          "generate": 251.16930000149296
+        },
+        "cited": [],
+        "has_citation": false,
+        "citations_valid": false,
+        "cites_expected": false,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the query about the company Ironwood Capital Partners agreed to acquire and the associated cost synergies, with no irrelevant information included."
+          },
+          "correctness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The actual output correctly identifies the company Ironwood Capital Partners agreed to acquire (Coastal Trust Bank) and the estimated annual cost synergies ($24 million), aligning with the expected output. The additional detail about the transaction value and type in the actual output is not penalized as per evaluation step 5."
+          }
+        }
+      },
+      {
+        "id": "rag_12",
+        "question": "What company did Fairmont Capital Partners agree to acquire and what are the cost synergies?",
+        "expected_output": "Fairmont Capital Partners agreed to acquire Granite State Bank, with estimated annual cost synergies of $32 million.",
+        "expected_source": "doc_0220_fairmont_merger.txt",
+        "answer": "\n\nFairmont Capital Partners agreed to acquire Granite State Bank for approximately $2580 million in an all-stock transaction. The estimated annual cost synergies are $32 million.",
+        "retrieved_sources": [
+          "doc_0220_fairmont_merger.txt",
+          "doc_0222_fairmont_guidance.txt",
+          "doc_0217_fairmont_earnings.txt",
+          "doc_0219_fairmont_compensation.txt",
+          "doc_0221_fairmont_litigation.txt"
+        ],
+        "context_sources": [
+          "doc_0220_fairmont_merger.txt",
+          "doc_0222_fairmont_guidance.txt",
+          "doc_0217_fairmont_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - MATERIAL DEFINITIVE AGREEMENT\nRegistrant: Fairmont Capital Partners\nFiling Date: 2026-05-17\n\nItem 1.01 Entry into a Material Definitive Agreement.\nFairmont Capital Partners entered a definitive agreement to acquire Granite State Bank for approximately\n$2580 million in an all-stock transaction, expected to close in Q1 2026\nsubject to regulatory approval. The combined entity would hold approximately\n$6.0 billion in total assets. Estimated annual cost synergies are\n$32 million, with the transaction accretive to EPS within 12 months.\n",
+          "FORM 8-K EXCERPT - FORWARD GUIDANCE REVISION\nRegistrant: Fairmont Capital Partners\nFiling Date: 2026-07-23\n\nItem 2.02 Results of Operations and Financial Condition.\nFairmont Capital Partners revised full-year guidance, now projecting net revenue between\n$1512 million and $1552 million, versus prior guidance of $1507 million\nto $1562 million. The revision reflects elevated credit costs. Expected full-year\noperating margin is 17%. Capital expenditure guidance is $42 million.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Fairmont Capital Partners\nFiling Date: 2026-02-08\n\nItem 2.02 Results of Operations and Financial Condition.\nFairmont Capital Partners reported quarterly net revenue of $1669 million, a 4% change year-over-year.\nOperating margin was 17%, compared to 23% in the prior year period.\nThe company recorded credit loss provisions of $25 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 4% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 143.30160000099568,
+          "generate": 303.31049999949755
+        },
+        "cited": [],
+        "has_citation": false,
+        "citations_valid": false,
+        "cites_expected": false,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context with no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the output directly and accurately addresses the input query without any irrelevant information."
+          },
+          "correctness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The actual output correctly identifies the company acquired (Granite State Bank) and the cost synergies ($32 million), aligning with the expected output. The additional detail about the transaction type and total acquisition cost does not contradict the expected output and is not penalized according to the evaluation steps."
+          }
+        }
+      },
+      {
+        "id": "rag_13",
+        "question": "What is Ashcroft Capital Partners's target total CEO compensation?",
+        "expected_output": "Ashcroft Capital Partners's target total CEO compensation is $8 million.",
+        "expected_source": "doc_0039_ashcroft_compensation.txt",
+        "answer": "\n\n$8 million [doc_0039_ashcroft_compensation.txt]",
+        "retrieved_sources": [
+          "doc_0039_ashcroft_compensation.txt",
+          "doc_0041_ashcroft_litigation.txt",
+          "doc_0037_ashcroft_earnings.txt",
+          "doc_0038_ashcroft_risk.txt",
+          "doc_0042_ashcroft_guidance.txt",
+          "doc_0040_ashcroft_merger.txt"
+        ],
+        "context_sources": [
+          "doc_0039_ashcroft_compensation.txt",
+          "doc_0041_ashcroft_litigation.txt",
+          "doc_0037_ashcroft_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Ashcroft Capital Partners\nFiling Date: 2026-04-06\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 55% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.48 million.\nTarget total compensation is $8 million, with maximum payout of $22 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Ashcroft Capital Partners\nFiling Date: 2026-06-12\n\nItem 8.01 Other Events.\nAshcroft Capital Partners disclosed a settlement of $18 million related to regulatory\ninquiries regarding mortgage underwriting standards. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $7 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Ashcroft Capital Partners\nFiling Date: 2026-02-28\n\nItem 2.02 Results of Operations and Financial Condition.\nAshcroft Capital Partners reported quarterly net revenue of $409 million, a 14% change year-over-year.\nOperating margin was 17%, compared to 19% in the prior year period.\nThe company recorded credit loss provisions of $45 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 4% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 96.70480000022508,
+          "generate": 423.194599999988
+        },
+        "cited": [
+          "doc_0039_ashcroft_compensation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 0.0,
+            "success": false,
+            "reason": "The score is 0.00 because the actual output incorrectly states that Ashcroft received $8 million in compensation, whereas the context clearly mentions the target total compensation for the CEO at Ashcroft Capital Partners is $8 million."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about Ashcroft Capital Partners's target total CEO compensation without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the target total CEO compensation for Ashcroft Capital Partners as $8 million, which aligns with the expected output. However, it lacks the explicit statement that this is Ashcroft Capital Partners's target total CEO compensation, which is present in the expected output. Despite this, the core fact is accurately conveyed, and no contradictory or missing facts are present. The citation is also correctly included, which is not penalized according to the evaluation steps."
+          }
+        }
+      },
+      {
+        "id": "rag_14",
+        "question": "What settlement amount did Bluewater Trust Company disclose for regulatory inquiries?",
+        "expected_output": "Bluewater Trust Company disclosed a settlement of $12 million related to regulatory inquiries.",
+        "expected_source": "doc_0089_bluewater_litigation.txt",
+        "answer": "\n\n$12 million [doc_0089_bluewater_litigation.txt]",
+        "retrieved_sources": [
+          "doc_0089_bluewater_litigation.txt",
+          "doc_0087_bluewater_compensation.txt",
+          "doc_0085_bluewater_earnings.txt",
+          "doc_0086_bluewater_risk.txt",
+          "doc_0090_bluewater_guidance.txt",
+          "doc_0088_bluewater_merger.txt"
+        ],
+        "context_sources": [
+          "doc_0089_bluewater_litigation.txt",
+          "doc_0087_bluewater_compensation.txt",
+          "doc_0085_bluewater_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Bluewater Trust Company\nFiling Date: 2026-06-16\n\nItem 8.01 Other Events.\nBluewater Trust Company disclosed a settlement of $12 million related to regulatory\ninquiries regarding overdraft fee assessment. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $10 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Bluewater Trust Company\nFiling Date: 2026-04-10\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 50% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.48 million.\nTarget total compensation is $11 million, with maximum payout of $14 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Bluewater Trust Company\nFiling Date: 2026-02-04\n\nItem 2.02 Results of Operations and Financial Condition.\nBluewater Trust Company reported quarterly net revenue of $745 million, a 5% change year-over-year.\nOperating margin was 17%, compared to 23% in the prior year period.\nThe company recorded credit loss provisions of $13 million this quarter.\nDiluted earnings per share were $3.55. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 134.26670000080776,
+          "generate": 516.8197000002692
+        },
+        "cited": [
+          "doc_0089_bluewater_litigation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the settlement amount disclosed by Bluewater Trust Company for regulatory inquiries, with no irrelevant information included."
+          },
+          "correctness": {
+            "score": 0.7,
+            "success": true,
+            "reason": "The actual output correctly identifies the settlement amount of $12 million, which aligns with the expected output. However, it lacks the context of the company name and the nature of the disclosure, which are present in the expected output. Despite this, it does not contradict any facts and provides the key numerical value requested. The citation is not penalized as per the evaluation steps."
+          }
+        }
+      },
+      {
+        "id": "rag_15",
+        "question": "What was Kingsley Trust Company's quarterly net revenue?",
+        "expected_output": "Kingsley Trust Company's quarterly net revenue was $3265 million.",
+        "expected_source": "doc_0445_kingsley_earnings.txt",
+        "answer": "\n\n$3265 million [doc_0445_kingsley_earnings.txt]",
+        "retrieved_sources": [
+          "doc_0445_kingsley_earnings.txt",
+          "doc_0447_kingsley_compensation.txt",
+          "doc_0449_kingsley_litigation.txt",
+          "doc_0446_kingsley_risk.txt",
+          "doc_0450_kingsley_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0445_kingsley_earnings.txt",
+          "doc_0447_kingsley_compensation.txt",
+          "doc_0449_kingsley_litigation.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Kingsley Trust Company\nFiling Date: 2026-02-20\n\nItem 2.02 Results of Operations and Financial Condition.\nKingsley Trust Company reported quarterly net revenue of $3265 million, a 4% change year-over-year.\nOperating margin was 17%, compared to 20% in the prior year period.\nThe company recorded credit loss provisions of $13 million this quarter.\nDiluted earnings per share were $3.55. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Kingsley Trust Company\nFiling Date: 2026-04-26\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 65% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.48 million.\nTarget total compensation is $11 million, with maximum payout of $24 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Kingsley Trust Company\nFiling Date: 2026-06-04\n\nItem 8.01 Other Events.\nKingsley Trust Company disclosed a settlement of $18 million related to regulatory\ninquiries regarding disclosure timing. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $10 million reserve was established for related matters.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 43.01309999937075,
+          "generate": 319.5360999998229
+        },
+        "cited": [
+          "doc_0445_kingsley_earnings.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate actual output."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about Kingsley Trust Company's quarterly net revenue without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.7,
+            "success": true,
+            "reason": "The actual output provides the correct numerical value of $3265 million, which aligns with the expected output. However, it fails to explicitly state that this is Kingsley Trust Company's quarterly net revenue, which is a required fact according to the expected output. This omission results in a lower score."
+          }
+        }
+      },
+      {
+        "id": "rag_16",
+        "question": "What is Kingsley Capital Partners's target total CEO compensation?",
+        "expected_output": "Kingsley Capital Partners's target total CEO compensation is $11 million.",
+        "expected_source": "doc_0429_kingsley_compensation.txt",
+        "answer": "\n\n$11 million [doc_0429_kingsley_compensation.txt]",
+        "retrieved_sources": [
+          "doc_0429_kingsley_compensation.txt",
+          "doc_0431_kingsley_litigation.txt",
+          "doc_0427_kingsley_earnings.txt",
+          "doc_0428_kingsley_risk.txt",
+          "doc_0432_kingsley_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0429_kingsley_compensation.txt",
+          "doc_0431_kingsley_litigation.txt",
+          "doc_0427_kingsley_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Kingsley Capital Partners\nFiling Date: 2026-10-28\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 45% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $11 million, with maximum payout of $20 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Kingsley Capital Partners\nFiling Date: 2026-12-06\n\nItem 8.01 Other Events.\nKingsley Capital Partners disclosed a settlement of $16 million related to regulatory\ninquiries regarding anti-money-laundering controls. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 15 months.\nAn additional $10 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Kingsley Capital Partners\nFiling Date: 2026-08-22\n\nItem 2.02 Results of Operations and Financial Condition.\nKingsley Capital Partners reported quarterly net revenue of $3139 million, a 5% change year-over-year.\nOperating margin was 23%, compared to 24% in the prior year period.\nThe company recorded credit loss provisions of $35 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 85.03219999875,
+          "generate": 369.69070000122883
+        },
+        "cited": [
+          "doc_0429_kingsley_compensation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about Kingsley Capital Partners's target total CEO compensation without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the target total CEO compensation of $11 million, which aligns with the expected output. However, it does not explicitly state 'Kingsley Capital Partners's target total CEO compensation,' which is required by the expected output. Despite this, the fact is correctly identified and no contradictory or missing facts are present. The citation is also correctly included, which is not penalized. Therefore, the score reflects a minor misalignment due to the missing company name in the actual output."
+          }
+        }
+      },
+      {
+        "id": "rag_17",
+        "question": "What is Bluewater Capital Partners's revised full-year revenue guidance range?",
+        "expected_output": "Bluewater Capital Partners projects full-year net revenue between $612 million and $652 million.",
+        "expected_source": "doc_0072_bluewater_guidance.txt",
+        "answer": "\n\n$612 million to $652 million [doc_0072_bluewater_guidance.txt]",
+        "retrieved_sources": [
+          "doc_0072_bluewater_guidance.txt",
+          "doc_0067_bluewater_earnings.txt",
+          "doc_0069_bluewater_compensation.txt",
+          "doc_0071_bluewater_litigation.txt",
+          "doc_0068_bluewater_risk.txt"
+        ],
+        "context_sources": [
+          "doc_0072_bluewater_guidance.txt",
+          "doc_0067_bluewater_earnings.txt",
+          "doc_0069_bluewater_compensation.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - FORWARD GUIDANCE REVISION\nRegistrant: Bluewater Capital Partners\nFiling Date: 2026-01-21\n\nItem 2.02 Results of Operations and Financial Condition.\nBluewater Capital Partners revised full-year guidance, now projecting net revenue between\n$612 million and $652 million, versus prior guidance of $607 million\nto $662 million. The revision reflects elevated credit costs. Expected full-year\noperating margin is 21%. Capital expenditure guidance is $42 million.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Bluewater Capital Partners\nFiling Date: 2026-08-06\n\nItem 2.02 Results of Operations and Financial Condition.\nBluewater Capital Partners reported quarterly net revenue of $619 million, a 6% change year-over-year.\nOperating margin was 23%, compared to 16% in the prior year period.\nThe company recorded credit loss provisions of $35 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Bluewater Capital Partners\nFiling Date: 2026-10-12\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 65% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $11 million, with maximum payout of $24 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 112.07950000061828,
+          "generate": 398.07959999961895
+        },
+        "cited": [
+          "doc_0072_bluewater_guidance.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the output directly and accurately addresses the input query about Bluewater Capital Partners's revised full-year revenue guidance range without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the revised full-year revenue guidance range of $612 million to $652 million, which aligns with the expected output. However, it lacks the explicit mention of 'Bluewater Capital Partners' and the term 'projects', which are present in the expected output. Despite this, the core fact is accurately stated, and no contradictory or irrelevant information is included."
+          }
+        }
+      },
+      {
+        "id": "rag_18",
+        "question": "What was Calderwood Capital Partners's quarterly net revenue?",
+        "expected_output": "Calderwood Capital Partners's quarterly net revenue was $1879 million.",
+        "expected_source": "doc_0247_calderwood_earnings.txt",
+        "answer": "\n\n$1879 million [doc_0247_calderwood_earnings.txt]",
+        "retrieved_sources": [
+          "doc_0247_calderwood_earnings.txt",
+          "doc_0249_calderwood_compensation.txt",
+          "doc_0251_calderwood_litigation.txt",
+          "doc_0248_calderwood_risk.txt",
+          "doc_0252_calderwood_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0247_calderwood_earnings.txt",
+          "doc_0249_calderwood_compensation.txt",
+          "doc_0251_calderwood_litigation.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Calderwood Capital Partners\nFiling Date: 2026-08-14\n\nItem 2.02 Results of Operations and Financial Condition.\nCalderwood Capital Partners reported quarterly net revenue of $1879 million, a -4% change year-over-year.\nOperating margin was 23%, compared to 20% in the prior year period.\nThe company recorded credit loss provisions of $15 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Calderwood Capital Partners\nFiling Date: 2026-10-20\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 55% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $0.94 million.\nTarget total compensation is $11 million, with maximum payout of $22 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Calderwood Capital Partners\nFiling Date: 2026-12-26\n\nItem 8.01 Other Events.\nCalderwood Capital Partners disclosed a settlement of $30 million related to regulatory\ninquiries regarding mortgage underwriting standards. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 15 months.\nAn additional $10 million reserve was established for related matters.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 42.068999999173684,
+          "generate": 279.57450000030803
+        },
+        "cited": [
+          "doc_0247_calderwood_earnings.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate representation of the retrieval context."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about Calderwood Capital Partners's quarterly net revenue without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.9,
+            "success": true,
+            "reason": "The actual output correctly identifies the quarterly net revenue of Calderwood Capital Partners as $1879 million, which aligns with the expected output. However, it lacks the explicit statement that this is the quarterly net revenue of the company, which is a minor shortcoming. The citation is appropriate and does not affect the score."
+          }
+        }
+      },
+      {
+        "id": "rag_19",
+        "question": "What is Northgate Financial Corp's target total CEO compensation?",
+        "expected_output": "Northgate Financial Corp's target total CEO compensation is $8 million.",
+        "expected_source": "doc_0093_northgate_compensation.txt",
+        "answer": "\n\n$8 million [doc_0093_northgate_compensation.txt]",
+        "retrieved_sources": [
+          "doc_0093_northgate_compensation.txt",
+          "doc_0095_northgate_litigation.txt",
+          "doc_0091_northgate_earnings.txt",
+          "doc_0092_northgate_risk.txt",
+          "doc_0096_northgate_guidance.txt",
+          "doc_0094_northgate_merger.txt"
+        ],
+        "context_sources": [
+          "doc_0093_northgate_compensation.txt",
+          "doc_0095_northgate_litigation.txt",
+          "doc_0091_northgate_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Northgate Financial Corp\nFiling Date: 2026-10-28\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 45% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.3 million.\nTarget total compensation is $8 million, with maximum payout of $20 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Northgate Financial Corp\nFiling Date: 2026-12-06\n\nItem 8.01 Other Events.\nNorthgate Financial Corp disclosed a settlement of $24 million related to regulatory\ninquiries regarding anti-money-laundering controls. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 15 months.\nAn additional $7 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Northgate Financial Corp\nFiling Date: 2026-08-22\n\nItem 2.02 Results of Operations and Financial Condition.\nNorthgate Financial Corp reported quarterly net revenue of $787 million, a 11% change year-over-year.\nOperating margin was 23%, compared to 18% in the prior year period.\nThe company recorded credit loss provisions of $19 million this quarter.\nDiluted earnings per share were $0.91. Management guidance projects revenue growth\nof 4% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 48.4348999998474,
+          "generate": 343.57530000124825
+        },
+        "cited": [
+          "doc_0093_northgate_compensation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate representation of the retrieval context."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the query about Northgate Financial Corp's target total CEO compensation without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the target total CEO compensation of Northgate Financial Corp as $8 million, which aligns with the expected output. However, it lacks the explicit mention of the company's name and the phrase 'target total CEO compensation', which are present in the expected output. Despite this, the core fact is accurately stated, and no contradictory or irrelevant information is included."
+          }
+        }
+      },
+      {
+        "id": "rag_20",
+        "question": "What was Crestline Trust Company's quarterly net revenue?",
+        "expected_output": "Crestline Trust Company's quarterly net revenue was $4105 million.",
+        "expected_source": "doc_0565_crestline_earnings.txt",
+        "answer": "\n\n$4105 million [doc_0565_crestline_earnings.txt]",
+        "retrieved_sources": [
+          "doc_0565_crestline_earnings.txt",
+          "doc_0567_crestline_compensation.txt",
+          "doc_0569_crestline_litigation.txt",
+          "doc_0566_crestline_risk.txt",
+          "doc_0570_crestline_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0565_crestline_earnings.txt",
+          "doc_0567_crestline_compensation.txt",
+          "doc_0569_crestline_litigation.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Crestline Trust Company\nFiling Date: 2026-02-16\n\nItem 2.02 Results of Operations and Financial Condition.\nCrestline Trust Company reported quarterly net revenue of $4105 million, a 10% change year-over-year.\nOperating margin was 17%, compared to 19% in the prior year period.\nThe company recorded credit loss provisions of $13 million this quarter.\nDiluted earnings per share were $3.55. Management guidance projects revenue growth\nof 10% for the following fiscal year, contingent on macroeconomic conditions.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Crestline Trust Company\nFiling Date: 2026-04-22\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 35% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.48 million.\nTarget total compensation is $5 million, with maximum payout of $18 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Crestline Trust Company\nFiling Date: 2026-06-28\n\nItem 8.01 Other Events.\nCrestline Trust Company disclosed a settlement of $20 million related to regulatory\ninquiries regarding data privacy compliance. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $4 million reserve was established for related matters.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 50.53049999878567,
+          "generate": 293.6574000013934
+        },
+        "cited": [
+          "doc_0565_crestline_earnings.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions or discrepancies."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the input query about Crestline Trust Company's quarterly net revenue without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.9,
+            "success": true,
+            "reason": "The actual output correctly identifies the quarterly net revenue of Crestline Trust Company as $4105 million, which aligns with the expected output. However, it lacks the explicit statement that this is Crestline Trust Company's revenue, which is present in the expected output. Despite this, the core fact is accurately represented, and no contradictory or missing facts are present. The citation is also correctly included, which is not penalized. Therefore, the score reflects a minor deduction for not fully matching the expected output format but still providing the correct information."
+          }
+        }
+      },
+      {
+        "id": "rag_21",
+        "question": "What is Kingsley Regional Bank's target total CEO compensation?",
+        "expected_output": "Kingsley Regional Bank's target total CEO compensation is $8 million.",
+        "expected_source": "doc_0435_kingsley_compensation.txt",
+        "answer": "\n\n$8 million [doc_0435_kingsley_compensation.txt]",
+        "retrieved_sources": [
+          "doc_0435_kingsley_compensation.txt",
+          "doc_0437_kingsley_litigation.txt",
+          "doc_0433_kingsley_earnings.txt",
+          "doc_0434_kingsley_risk.txt",
+          "doc_0436_kingsley_merger.txt",
+          "doc_0438_kingsley_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0435_kingsley_compensation.txt",
+          "doc_0437_kingsley_litigation.txt",
+          "doc_0433_kingsley_earnings.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Kingsley Regional Bank\nFiling Date: 2026-04-18\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 40% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.12 million.\nTarget total compensation is $8 million, with maximum payout of $12 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Kingsley Regional Bank\nFiling Date: 2026-06-24\n\nItem 8.01 Other Events.\nKingsley Regional Bank disclosed a settlement of $28 million related to regulatory\ninquiries regarding fee structures. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $7 million reserve was established for related matters.\n",
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Kingsley Regional Bank\nFiling Date: 2026-02-12\n\nItem 2.02 Results of Operations and Financial Condition.\nKingsley Regional Bank reported quarterly net revenue of $3181 million, a 11% change year-over-year.\nOperating margin was 17%, compared to 19% in the prior year period.\nThe company recorded credit loss provisions of $41 million this quarter.\nDiluted earnings per share were $2.23. Management guidance projects revenue growth\nof 4% for the following fiscal year, contingent on macroeconomic conditions.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 95.4701999999088,
+          "generate": 479.9817000002804
+        },
+        "cited": [
+          "doc_0435_kingsley_compensation.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfect alignment between the actual output and the retrieval context."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about Kingsley Regional Bank's target total CEO compensation without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.7,
+            "success": true,
+            "reason": "The actual output correctly identifies the target total CEO compensation of $8 million, which aligns with the expected output. However, it does not explicitly state that this is Kingsley Regional Bank's target total CEO compensation, which is a required fact according to the expected output. This omission results in a moderate penalty."
+          }
+        }
+      },
+      {
+        "id": "rag_22",
+        "question": "What was Bluewater Financial Corp's quarterly net revenue?",
+        "expected_output": "Bluewater Financial Corp's quarterly net revenue was $577 million.",
+        "expected_source": "doc_0061_bluewater_earnings.txt",
+        "answer": "\n\n$577 million [doc_0061_bluewater_earnings.txt]",
+        "retrieved_sources": [
+          "doc_0061_bluewater_earnings.txt",
+          "doc_0063_bluewater_compensation.txt",
+          "doc_0065_bluewater_litigation.txt",
+          "doc_0062_bluewater_risk.txt",
+          "doc_0066_bluewater_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0061_bluewater_earnings.txt",
+          "doc_0063_bluewater_compensation.txt",
+          "doc_0065_bluewater_litigation.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Bluewater Financial Corp\nFiling Date: 2026-02-16\n\nItem 2.02 Results of Operations and Financial Condition.\nBluewater Financial Corp reported quarterly net revenue of $577 million, a 0% change year-over-year.\nOperating margin was 17%, compared to 21% in the prior year period.\nThe company recorded credit loss provisions of $29 million this quarter.\nDiluted earnings per share were $0.91. Management guidance projects revenue growth\nof 10% for the following fiscal year, contingent on macroeconomic conditions.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Bluewater Financial Corp\nFiling Date: 2026-04-22\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 35% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.48 million.\nTarget total compensation is $5 million, with maximum payout of $18 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Bluewater Financial Corp\nFiling Date: 2026-06-28\n\nItem 8.01 Other Events.\nBluewater Financial Corp disclosed a settlement of $32 million related to regulatory\ninquiries regarding data privacy compliance. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $4 million reserve was established for related matters.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 45.3588000000309,
+          "generate": 363.54169999867736
+        },
+        "cited": [
+          "doc_0061_bluewater_earnings.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate actual output."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the input query about Bluewater Financial Corp's quarterly net revenue without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the quarterly net revenue of Bluewater Financial Corp as $577 million, which aligns with the expected output. However, it lacks the explicit mention of the company name and the context ('quarterly net revenue') which are present in the expected output. Despite this, the core fact is accurately represented, and no contradictory or irrelevant information is included."
+          }
+        }
+      },
+      {
+        "id": "rag_23",
+        "question": "What company did Summitvale Capital Partners agree to acquire and what are the cost synergies?",
+        "expected_output": "Summitvale Capital Partners agreed to acquire Granite State Bank, with estimated annual cost synergies of $28 million.",
+        "expected_source": "doc_0580_summitvale_merger.txt",
+        "answer": "\n\nSummitvale Capital Partners agreed to acquire Granite State Bank for approximately $6540 million in an all-stock transaction. The estimated annual cost synergies are $28 million.",
+        "retrieved_sources": [
+          "doc_0580_summitvale_merger.txt",
+          "doc_0579_summitvale_compensation.txt",
+          "doc_0582_summitvale_guidance.txt",
+          "doc_0581_summitvale_litigation.txt",
+          "doc_0577_summitvale_earnings.txt"
+        ],
+        "context_sources": [
+          "doc_0580_summitvale_merger.txt",
+          "doc_0579_summitvale_compensation.txt",
+          "doc_0582_summitvale_guidance.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - MATERIAL DEFINITIVE AGREEMENT\nRegistrant: Summitvale Capital Partners\nFiling Date: 2026-05-05\n\nItem 1.01 Entry into a Material Definitive Agreement.\nSummitvale Capital Partners entered a definitive agreement to acquire Granite State Bank for approximately\n$6540 million in an all-stock transaction, expected to close in Q1 2026\nsubject to regulatory approval. The combined entity would hold approximately\n$11.6 billion in total assets. Estimated annual cost synergies are\n$28 million, with the transaction accretive to EPS within 12 months.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Summitvale Capital Partners\nFiling Date: 2026-04-02\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 60% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.12 million.\nTarget total compensation is $8 million, with maximum payout of $16 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - FORWARD GUIDANCE REVISION\nRegistrant: Summitvale Capital Partners\nFiling Date: 2026-07-11\n\nItem 2.02 Results of Operations and Financial Condition.\nSummitvale Capital Partners revised full-year guidance, now projecting net revenue between\n$3672 million and $3712 million, versus prior guidance of $3667 million\nto $3722 million. The revision reflects elevated credit costs. Expected full-year\noperating margin is 25%. Capital expenditure guidance is $52 million.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 65.93939999947906,
+          "generate": 314.54669999948237
+        },
+        "cited": [],
+        "has_citation": false,
+        "citations_valid": false,
+        "cites_expected": false,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 0.75,
+            "success": true,
+            "reason": "The score is 0.75 because the response correctly identifies the company acquired and mentions cost synergies, but includes irrelevant details about the type of transaction which do not directly address the specific question asked."
+          },
+          "correctness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The actual output correctly identifies the company Summitvale Capital Partners agreed to acquire (Granite State Bank) and the estimated annual cost synergies ($28 million), aligning with the expected output. The additional detail about the transaction being all-stock and the specific acquisition cost ($6540 million) does not contradict the expected output and is not penalized according to the evaluation steps."
+          }
+        }
+      },
+      {
+        "id": "rag_24",
+        "question": "What was Pinecrest Capital Partners's quarterly net revenue?",
+        "expected_output": "Pinecrest Capital Partners's quarterly net revenue was $1039 million.",
+        "expected_source": "doc_0127_pinecrest_earnings.txt",
+        "answer": "\n\n$1039 million [doc_0127_pinecrest_earnings.txt]",
+        "retrieved_sources": [
+          "doc_0127_pinecrest_earnings.txt",
+          "doc_0129_pinecrest_compensation.txt",
+          "doc_0131_pinecrest_litigation.txt",
+          "doc_0128_pinecrest_risk.txt",
+          "doc_0132_pinecrest_guidance.txt",
+          "doc_0130_pinecrest_merger.txt"
+        ],
+        "context_sources": [
+          "doc_0127_pinecrest_earnings.txt",
+          "doc_0129_pinecrest_compensation.txt",
+          "doc_0131_pinecrest_litigation.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Pinecrest Capital Partners\nFiling Date: 2026-08-18\n\nItem 2.02 Results of Operations and Financial Condition.\nPinecrest Capital Partners reported quarterly net revenue of $1039 million, a 9% change year-over-year.\nOperating margin was 23%, compared to 21% in the prior year period.\nThe company recorded credit loss provisions of $15 million this quarter.\nDiluted earnings per share were $1.57. Management guidance projects revenue growth\nof 4% for the following fiscal year, contingent on macroeconomic conditions.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Pinecrest Capital Partners\nFiling Date: 2026-10-24\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 50% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $0.94 million.\nTarget total compensation is $8 million, with maximum payout of $14 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Pinecrest Capital Partners\nFiling Date: 2026-12-02\n\nItem 8.01 Other Events.\nPinecrest Capital Partners disclosed a settlement of $28 million related to regulatory\ninquiries regarding overdraft fee assessment. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 15 months.\nAn additional $7 million reserve was established for related matters.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 86.15529999951832,
+          "generate": 347.85330000158865
+        },
+        "cited": [
+          "doc_0127_pinecrest_earnings.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about Pinecrest Capital Partners's quarterly net revenue without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the quarterly net revenue of Pinecrest Capital Partners as $1039 million, which aligns with the expected output. However, it lacks the explicit statement that this is Pinecrest Capital Partners's quarterly net revenue, which is a key fact in the expected output. Despite this, the core fact is present and correctly stated, so the score reflects a minor deduction for not fully matching the expected output format."
+          }
+        }
+      },
+      {
+        "id": "rag_25",
+        "question": "What was Fairmont Holdings's quarterly net revenue?",
+        "expected_output": "Fairmont Holdings's quarterly net revenue was $1753 million.",
+        "expected_source": "doc_0229_fairmont_earnings.txt",
+        "answer": "\n\n$1753 million [doc_0229_fairmont_earnings.txt]",
+        "retrieved_sources": [
+          "doc_0229_fairmont_earnings.txt",
+          "doc_0231_fairmont_compensation.txt",
+          "doc_0233_fairmont_litigation.txt",
+          "doc_0230_fairmont_risk.txt",
+          "doc_0234_fairmont_guidance.txt"
+        ],
+        "context_sources": [
+          "doc_0229_fairmont_earnings.txt",
+          "doc_0231_fairmont_compensation.txt",
+          "doc_0233_fairmont_litigation.txt"
+        ],
+        "contexts": [
+          "FORM 8-K EXCERPT - RESULTS OF OPERATIONS\nRegistrant: Fairmont Holdings\nFiling Date: 2026-02-16\n\nItem 2.02 Results of Operations and Financial Condition.\nFairmont Holdings reported quarterly net revenue of $1753 million, a -3% change year-over-year.\nOperating margin was 17%, compared to 24% in the prior year period.\nThe company recorded credit loss provisions of $37 million this quarter.\nDiluted earnings per share were $2.89. Management guidance projects revenue growth\nof 7% for the following fiscal year, contingent on macroeconomic conditions.\n",
+          "FORM 8-K EXCERPT - EXECUTIVE COMPENSATION\nRegistrant: Fairmont Holdings\nFiling Date: 2026-04-22\n\nItem 5.02 Compensation Arrangements.\nThe Compensation Committee approved a structure tying 35% of CEO variable\ncompensation to risk-adjusted return on capital. Base salary remains $1.48 million.\nTarget total compensation is $11 million, with maximum payout of $18 million.\nThe change responds to shareholder feedback on compensation alignment with credit risk outcomes.\n",
+          "FORM 8-K EXCERPT - LEGAL PROCEEDINGS\nRegistrant: Fairmont Holdings\nFiling Date: 2026-06-28\n\nItem 8.01 Other Events.\nFairmont Holdings disclosed a settlement of $28 million related to regulatory\ninquiries regarding data privacy compliance. The company admitted no wrongdoing as part of the\nresolution. The settlement is expected to be paid within 9 months.\nAn additional $10 million reserve was established for related matters.\n"
+        ],
+        "latency_ms": {
+          "retrieve": 43.120800000906456,
+          "generate": 284.65999999934866
+        },
+        "cited": [
+          "doc_0229_fairmont_earnings.txt"
+        ],
+        "has_citation": true,
+        "citations_valid": true,
+        "cites_expected": true,
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "refused": false,
+        "judge": {
+          "faithfulness": {
+            "score": 0.0,
+            "success": false,
+            "reason": "The score is 0.00 because the actual output incorrectly reported earnings instead of the documented net revenue of $1753 million."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the response directly and accurately addresses the question about Fairmont Holdings's quarterly net revenue without any irrelevant information."
+          },
+          "correctness": {
+            "score": 0.8,
+            "success": true,
+            "reason": "The actual output correctly identifies the quarterly net revenue of Fairmont Holdings as $1753 million, which aligns with the expected output. However, it lacks the explicit statement that this is Fairmont Holdings's quarterly net revenue, which is present in the expected output. Despite this, the core fact is accurately represented, and no contradictory or missing facts are present. The citation is not penalized as per the evaluation steps."
+          }
+        }
+      }
+    ],
+    "generator": [
+      {
+        "id": "rag_01",
+        "answer": "\n\nAccording to the provided context [doc_0332_silverton_risk.txt], the commercial real estate loan portfolio represents approximately 21% of total assets.",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_02",
+        "answer": "\n\n$8 million [doc_0155_harborview_litigation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_03",
+        "answer": "\n\n$5 million [doc_0405_brightwater_compensation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate actual output."
+          }
+        }
+      },
+      {
+        "id": "rag_04",
+        "answer": "\n\nAccording to the provided context [doc_0050_ashcroft_risk.txt], the commercial real estate loan portfolio represents approximately 11% of total assets.",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_05",
+        "answer": "\n\n$8 million [doc_0075_bluewater_compensation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 0.5,
+            "success": false,
+            "reason": "The score is 0.50 because the actual output incorrectly attributes the amount of $8 million directly to the document, whereas the context specifies it as the target total compensation for the CEO, not explicitly mentioned as such in the document."
+          }
+        }
+      },
+      {
+        "id": "rag_06",
+        "answer": "\n\n$5 million [doc_0549_crestline_compensation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate actual output."
+          }
+        }
+      },
+      {
+        "id": "rag_07",
+        "answer": "\n\n$829 million [doc_0097_northgate_earnings.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 0.0,
+            "success": false,
+            "reason": "The score is 0.00 because the actual output incorrectly states earnings instead of the reported net revenue of $829 million."
+          }
+        }
+      },
+      {
+        "id": "rag_08",
+        "answer": "\n\n$11 million [doc_0375_oakhaven_compensation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 0.5,
+            "success": false,
+            "reason": "The score is 0.50 because the actual output fails to include the document identifier, which is a critical piece of information missing from the retrieval context."
+          }
+        }
+      },
+      {
+        "id": "rag_09",
+        "answer": "\n\n$8 million [doc_0597_summitvale_compensation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions or discrepancies."
+          }
+        }
+      },
+      {
+        "id": "rag_10",
+        "answer": "\n\n$540 million to $580 million [doc_0060_ashcroft_guidance.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_11",
+        "answer": "\n\nIronwood Capital Partners agreed to acquire Coastal Trust Bank. The estimated annual cost synergies are $24 million.",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions or discrepancies."
+          }
+        }
+      },
+      {
+        "id": "rag_12",
+        "answer": "\n\nFairmont Capital Partners agreed to acquire Granite State Bank. The estimated annual cost synergies are $32 million.",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_13",
+        "answer": "\n\n$8 million [doc_0039_ashcroft_compensation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_14",
+        "answer": "\n\n$12 million [doc_0089_bluewater_litigation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_15",
+        "answer": "\n\n$3265 million [doc_0445_kingsley_earnings.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_16",
+        "answer": "\n\n$11 million [doc_0429_kingsley_compensation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 0.5,
+            "success": false,
+            "reason": "The score is 0.50 because the actual output fails to mention the document identifier, which is a critical piece of information present in the retrieval context."
+          }
+        }
+      },
+      {
+        "id": "rag_17",
+        "answer": "\n\n$612 million to $652 million [doc_0072_bluewater_guidance.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_18",
+        "answer": "\n\n$1879 million [doc_0247_calderwood_earnings.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_19",
+        "answer": "\n\n$8 million [doc_0093_northgate_compensation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_20",
+        "answer": "\n\n$4105 million [doc_0565_crestline_earnings.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions."
+          }
+        }
+      },
+      {
+        "id": "rag_21",
+        "answer": "\n\n$8 million [doc_0435_kingsley_compensation.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 0.0,
+            "success": false,
+            "reason": "The score is 0.00 because the document identifier 'doc_0435_kingsley_compensation.txt' is not directly associated with a monetary value, despite the document being related to the CEO's target total compensation of $8 million."
+          }
+        }
+      },
+      {
+        "id": "rag_22",
+        "answer": "\n\n$577 million [doc_0061_bluewater_earnings.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate representation of the retrieval context."
+          }
+        }
+      },
+      {
+        "id": "rag_23",
+        "answer": "\n\nSummitvale Capital Partners agreed to acquire Granite State Bank. The estimated annual cost synergies are $28 million.",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate actual output."
+          }
+        }
+      },
+      {
+        "id": "rag_24",
+        "answer": "\n\n$1039 million [doc_0127_pinecrest_earnings.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate actual output."
+          }
+        }
+      },
+      {
+        "id": "rag_25",
+        "answer": "\n\n$1753 million [doc_0229_fairmont_earnings.txt]",
+        "number_lock_ok": true,
+        "unsupported_numbers": [],
+        "key_facts_ok": true,
+        "missing_facts": [],
+        "judge": {
+          "faithfulness": {
+            "score": 1.0,
+            "success": true,
+            "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful and accurate representation of the retrieval context."
+          }
+        }
+      }
+    ],
+    "refusal": [
+      {
+        "id": "ref_01",
+        "kind": "near_duplicate_name",
+        "question": "What was Meridian Bancorp's quarterly net revenue?",
+        "answer": "\n\nI don't have enough information to answer that.",
+        "refused": true,
+        "context_sources": [
+          "doc_0019_meridian_earnings.txt",
+          "doc_0001_meridian_earnings.txt",
+          "doc_0013_meridian_earnings.txt"
+        ]
+      },
+      {
+        "id": "ref_02",
+        "kind": "near_duplicate_name",
+        "question": "What settlement amount did Ashcroft Bancorp disclose for regulatory inquiries?",
+        "answer": "\n\nI don't have enough information to answer that.",
+        "refused": true,
+        "context_sources": [
+          "doc_0053_ashcroft_litigation.txt",
+          "doc_0059_ashcroft_litigation.txt",
+          "doc_0035_ashcroft_litigation.txt"
+        ]
+      },
+      {
+        "id": "ref_03",
+        "kind": "near_duplicate_name",
+        "question": "What is Northgate Bancorp's target total CEO compensation?",
+        "answer": "\n\nI don't have enough information to answer that.",
+        "refused": true,
+        "context_sources": [
+          "doc_0213_fairmont_compensation.txt",
+          "doc_0165_harborview_compensation.txt",
+          "doc_0225_fairmont_compensation.txt"
+        ]
+      },
+      {
+        "id": "ref_04",
+        "kind": "unknown_company",
+        "question": "What was Granite Peak Financial's quarterly net revenue?",
+        "answer": "\n\nI don't have enough information to answer that.",
+        "refused": true,
+        "context_sources": [
+          "doc_0319_ridgeline_earnings.txt",
+          "doc_0409_brightwater_earnings.txt",
+          "doc_0169_harborview_earnings.txt"
+        ]
+      },
+      {
+        "id": "ref_05",
+        "kind": "unknown_company",
+        "question": "What company did Evergreen Holdings agree to acquire?",
+        "answer": "\n\nI don't have enough information to answer that.",
+        "refused": true,
+        "context_sources": [
+          "doc_0021_meridian_compensation.txt",
+          "doc_0413_brightwater_litigation.txt",
+          "doc_0591_summitvale_compensation.txt"
+        ]
+      },
+      {
+        "id": "ref_06",
+        "kind": "fact_not_in_corpus",
+        "question": "What is Meridian Financial Corp's dividend payout ratio?",
+        "answer": "\n\nI don't have enough information to answer that.",
+        "refused": true,
+        "context_sources": [
+          "doc_0003_meridian_compensation.txt",
+          "doc_0002_meridian_risk.txt",
+          "doc_0005_meridian_litigation.txt"
+        ]
+      },
+      {
+        "id": "ref_07",
+        "kind": "fact_not_in_corpus",
+        "question": "How many employees does Bluewater Regional Bank have?",
+        "answer": "\n\nI don't have enough information to answer that.",
+        "refused": true,
+        "context_sources": [
+          "doc_0075_bluewater_compensation.txt",
+          "doc_0073_bluewater_earnings.txt",
+          "doc_0077_bluewater_litigation.txt"
+        ]
+      },
+      {
+        "id": "ref_08",
+        "kind": "fact_not_in_corpus",
+        "question": "What is Northgate Holdings' credit rating from Moody's?",
+        "answer": "\n\nI don't have enough information to answer that.",
+        "refused": true,
+        "context_sources": [
+          "doc_0109_northgate_earnings.txt",
+          "doc_0110_northgate_risk.txt",
+          "doc_0114_northgate_guidance.txt"
+        ]
+      },
+      {
+        "id": "ref_09",
+        "kind": "wrong_period",
+        "question": "What was Pinecrest Holdings' quarterly net revenue in 2019?",
+        "answer": "\n\nI don't have enough information to answer that.",
+        "refused": true,
+        "context_sources": [
+          "doc_0139_pinecrest_earnings.txt",
+          "doc_0144_pinecrest_guidance.txt",
+          "doc_0141_pinecrest_compensation.txt"
+        ]
+      },
+      {
+        "id": "ref_10",
+        "kind": "off_topic",
+        "question": "What is the capital of France?",
+        "answer": "\n\nI don't have enough information to answer that.",
+        "refused": true,
+        "context_sources": [
+          "doc_0552_crestline_guidance.txt",
+          "doc_0192_stonebridge_guidance.txt",
+          "doc_0162_harborview_guidance.txt"
+        ]
+      }
+    ]
+  }
+}
