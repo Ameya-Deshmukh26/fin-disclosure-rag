@@ -39,9 +39,10 @@
 
 ## Commands
 ```bash
-docker build --platform linux/amd64 -f deploy/api.Dockerfile -t fin-rag-api .
+docker build --provenance=false --platform linux/amd64 -f deploy/api.Dockerfile -t fin-rag-api .
 python deploy/make_mlflow_snapshot.py
-docker build --platform linux/amd64 -f deploy/mlflow.Dockerfile -t fin-rag-mlflow .
+docker build --provenance=false --platform linux/amd64 -f deploy/mlflow.Dockerfile -t fin-rag-mlflow .
+# --provenance=false: Lambda rejects the attestation manifests newer Docker adds by default
 # push both to ECR, then:
 bash deploy/deploy_lambda.sh
 ```
