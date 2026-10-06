@@ -27,6 +27,18 @@ DATA_DIR = "data_big"
 W_DENSE = 0.2          # weight on dense ranks in weighted RRF (rest goes to BM25)
 K_RETRIEVE = 5         # chunks retrieved per retriever before fusion
 N_CONTEXT_DOCS = 3     # parent documents handed to the generator
+# What the generator is given:
+#   "documents"  the top N_CONTEXT_DOCS whole filings (parent-document expansion; fine only
+#                because these filings are about 500 characters)
+#   "chunks"     only the top N_CONTEXT_CHUNKS matched chunks, each with a metadata header
+#                (evals/build_chunk_index.py), so tokens don't grow with document length
+CONTEXT_MODE = os.environ.get("EVAL_CONTEXT_MODE", "documents")
+CHUNK_SIZE = int(os.environ.get("EVAL_CHUNK_SIZE", "200"))
+N_CONTEXT_CHUNKS = int(os.environ.get("EVAL_CONTEXT_CHUNKS", "4"))
+
+
+def chunk_index_path(size: int) -> str:
+    return f"index_chunks_{size}.pkl"
 # Metadata pre-filter: restrict search to the filings of the company named in the question.
 ENTITY_FILTER = os.environ.get("EVAL_ENTITY_FILTER", "1") == "1"   # on by default; set 0 to reproduce the baseline
 

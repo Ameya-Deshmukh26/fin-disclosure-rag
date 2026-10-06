@@ -183,3 +183,14 @@ def test_router_keeps_every_golden_question_on_the_model_path():
     router = Router.load()
     with open("goldens/rag_goldens.json", encoding="utf-8") as f:
         assert all(router.route(g["question"]).name == "company" for g in json.load(f))
+
+
+# ---- chunking for long documents ------------------------------------------------------------
+def test_chunks_keep_facts_whole_and_carry_their_company():
+    from evals.build_chunk_index import build
+    chunks = [c for c in build(200, 0) if c["source"] == "doc_0060_ashcroft_guidance.txt"]
+    assert all(c["text"].startswith("[Ashcroft Trust Company | ") for c in chunks)
+    # the regression that blocked the first chunked run: the range was split across chunks
+    assert any("between $540 million and $580 million" in c["text"] for c in chunks)
+    body = [c["text"].split("\n", 1)[1] for c in chunks]
+    assert all(b.rstrip().endswith(".") for b in body)

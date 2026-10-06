@@ -128,6 +128,35 @@ failing the job if any gate regresses.
 - Majority-vote three judge calls for faithfulness, the noisiest gated metric.
 - Hand-label `results/calibration.csv` to report judge-human agreement (Cohen's kappa).
 
+## Long documents: chunk-level context (Oct 6, 2026)
+
+Sending whole filings to the model only works because these filings are about 500
+characters; a real 10-K is hundreds of pages. `EVAL_CONTEXT_MODE=chunks` sends only the top
+matched chunks instead, each with a `[company | form | date]` header so a small chunk still
+says whose number it is (`evals/build_chunk_index.py`). New metric:
+`retrieval.answer_in_context_rate`, whether the text holding the answer reached the model.
+
+| Same 25 goldens + 10 refusals | Whole filings (3) | 200-char chunks, line splits | **200-char sentence chunks, top 3** |
+|---|---|---|---|
+| Answer text reached the model | 100% | 92% | **100%** |
+| Key facts correct | 100% | 92% | **100%** |
+| Refusals (gate) / number lock (gate) | 100% / 100% | 100% / 100% | **100% / 100%** |
+| Input tokens per question | 476 | 305 | **313 (34% fewer)** |
+| Faithfulness / relevancy (judge) | 0.880 / 0.990 | not run | **1.000 / 1.000** |
+| Correctness pass rate (judge) | 100% | not run | 96% |
+| Regression gate | PASS | **BLOCK** | PASS |
+
+- **The gate caught a chunking bug.** The filings are hard-wrapped, and splitting on line
+  breaks cut "net revenue between" from "$540 million and $580 million". The chunk that
+  matched the question had no numbers, and the chunk with the numbers matched nothing. The
+  model answered "[not specified]" rather than inventing a range. Fix: unwrap the text and
+  split at sentence ends. Top 5 chunks did not help (still 92%): more context cannot fix a
+  fact that was cut in half.
+- The one correctness miss is the judge penalizing a terse answer ("$8 million [doc_0155...]"),
+  which is correct and cited; the code check passes it.
+- Tokens now depend on chunk size and count, not document length. Default stays
+  `documents` until the API image ships the chunk index.
+
 ## Deployment
 The evaluated pipeline is served as a FastAPI app on AWS Lambda (container image from ECR,
 Function URL, Bedrock for generation, IAM execution role), with the same number-lock check

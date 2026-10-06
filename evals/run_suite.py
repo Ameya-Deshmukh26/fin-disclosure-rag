@@ -77,6 +77,9 @@ def run(skip_judge=False):
         c.update(checks.number_lock(out["answer"], out["contexts"]))
         c.update(checks.key_facts(out["answer"], g["expected_numbers"]))
         c["refused"] = checks.is_refusal(out["answer"])
+        # did the text that holds the answer reach the model at all? (the chunking metric)
+        c["answer_in_context"] = checks.key_facts(" ".join(out["contexts"]),
+                                                  g["expected_numbers"])["key_facts_ok"]
         cases.append(c)
 
     if judge:
@@ -126,6 +129,7 @@ def run(skip_judge=False):
         "retrieval.hit_at_5": pct([r["rank"] is not None for r in ret]),
         "retrieval.mrr": avg([1 / r["rank"] if r["rank"] else 0.0 for r in ret]),
         "retrieval.context_recall_at_3": pct([r["in_context"] for r in ret]),
+        "retrieval.answer_in_context_rate": pct([c["answer_in_context"] for c in cases]),
         "rag.citations_valid_rate": pct([c["citations_valid"] for c in cases]),
         "rag.cites_expected_rate": pct([c["cites_expected"] for c in cases]),
         "rag.number_lock_rate": pct([c["number_lock_ok"] for c in cases]),
@@ -138,6 +142,7 @@ def run(skip_judge=False):
         "ops.latency.generate_p95_ms": p95([c["latency_ms"]["generate"] for c in cases]),
         "ops.latency.retrieve_p50_ms": statistics.median([c["latency_ms"]["retrieve"] for c in cases]),
         "ops.generator_input_tokens": rag.gen_input_tokens,
+        "ops.rag_avg_input_tokens": avg([c["input_tokens"] for c in cases]),
         "ops.generator_output_tokens": rag.gen_output_tokens,
     }
     if judge:
@@ -216,6 +221,8 @@ def main():
                     "judge": config.JUDGE_MODEL if not args.skip_judge else "none",
                     "w_dense": config.W_DENSE, "k_retrieve": config.K_RETRIEVE,
                     "n_context_docs": config.N_CONTEXT_DOCS, "threshold": config.THRESHOLD,
+                    "context_mode": config.CONTEXT_MODE, "chunk_size": config.CHUNK_SIZE,
+                    "n_context_chunks": config.N_CONTEXT_CHUNKS,
                     "entity_filter": config.ENTITY_FILTER,
                     "correctness_rubric": RUBRIC_VERSION,
                     "embed_model": config.EMBED_MODEL, "baseline_saved": args.save_baseline},
