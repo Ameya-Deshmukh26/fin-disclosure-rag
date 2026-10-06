@@ -15,8 +15,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install pytest deepeval python-dotenv
-      - run: pytest tests/test_evals_offline.py -q
+      - run: pip install pytest deepeval python-dotenv numpy langchain-text-splitters
+      # python -m puts the repo root on sys.path so `import evals` resolves
+      - run: python -m pytest tests/test_evals_offline.py -q
 
   full-suite:
     # Real generator + judge calls. Fails the job if any GATE regresses vs baseline.
