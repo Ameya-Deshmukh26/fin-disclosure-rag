@@ -15,6 +15,9 @@ import os
 # Default: both on Amazon Bedrock. Generator = Meta Llama 3.1 8B; judge = Amazon Nova Pro,
 # a different model family from the generator, so the judge isn't grading its own kind.
 GENERATOR_MODEL = os.environ.get("EVAL_GENERATOR", "bedrock:us.meta.llama3-1-8b-instruct-v1:0")
+# USD per 1M tokens for the generator, Bedrock on-demand (Llama 3.1 8B Instruct). Used to turn
+# traced token counts into cost; update it if the model or the AWS price list changes.
+GENERATOR_PRICE_PER_M = {"input": 0.22, "output": 0.22}
 JUDGE_MODEL = os.environ.get("EVAL_JUDGE", "bedrock:us.amazon.nova-pro-v1:0")
 
 EMBED_MODEL = "all-mpnet-base-v2"

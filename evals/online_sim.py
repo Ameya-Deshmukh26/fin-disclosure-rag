@@ -54,7 +54,7 @@ from mlflow.tracing.constant import SpanAttributeKey  # noqa: E402
 
 from eval_gen import QUESTION_BY_TYPE  # noqa: E402
 from evals import checks  # noqa: E402
-from evals.config import GENERATOR_MODEL, GOLDENS_RAG, N_CONTEXT_DOCS  # noqa: E402
+from evals.config import GENERATOR_MODEL, GENERATOR_PRICE_PER_M, GOLDENS_RAG, N_CONTEXT_DOCS  # noqa: E402
 from evals.router import SMALLTALK_SAMPLES, Router  # noqa: E402
 from evals.tracking import _mlflow  # noqa: E402
 from generate import build_prompt  # noqa: E402
@@ -222,12 +222,19 @@ def _p95(xs):
     return xs[min(len(xs) - 1, int(round(0.95 * (len(xs) - 1))))]
 
 
+def cost_usd(r: dict) -> float:
+    """Generator cost of one request in USD (routes that skip the model cost 0)."""
+    return (r["input_tokens"] * GENERATOR_PRICE_PER_M["input"]
+            + r["output_tokens"] * GENERATOR_PRICE_PER_M["output"]) / 1e6
+
+
 def summarize(rows: list[dict], prefix: str) -> dict:
     out = {
         f"{prefix}.n": len(rows),
         f"{prefix}.avg_input_tokens": statistics.mean(r["input_tokens"] for r in rows),
         f"{prefix}.avg_output_tokens": statistics.mean(r["output_tokens"] for r in rows),
         f"{prefix}.avg_total_tokens": statistics.mean(r["total_tokens"] for r in rows),
+        f"{prefix}.cost_per_1k_questions_usd": 1000 * statistics.mean(cost_usd(r) for r in rows),
         f"{prefix}.refusal_rate": 100.0 * sum(r["refused"] for r in rows) / len(rows),
         f"{prefix}.guardrail_triggers": sum(r["guardrail_triggered"] for r in rows),
         f"{prefix}.model_call_rate": 100.0 * sum(r["model_called"] for r in rows) / len(rows),
