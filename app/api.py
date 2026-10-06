@@ -10,6 +10,9 @@ Runtime guardrails (the same deterministic checks the eval gate uses, applied pe
     number never reaches the user.
   - citation check: cited documents must be ones the model was actually given.
   - input limits: question length is capped.
+  - prompt injection, three layers: a regex for known phrasings (free), an LLM injection
+    judge on every question (evals/guard.py, fails closed), and a check that withholds any
+    answer repeating the system prompt.
 
 Deployed on AWS Lambda (container image + Lambda Web Adapter + Function URL); generation on
 Amazon Bedrock. Run locally with:  uvicorn app.api:app --port 8080
@@ -24,6 +27,7 @@ from starlette.concurrency import run_in_threadpool
 
 from evals import checks
 from evals.config import GENERATOR_MODEL
+from evals.guard import judge_injection
 from evals.rag import RAG
 from generate import build_prompt
 
@@ -65,6 +69,15 @@ async def ask(q: Question):
                 "checks": {"number_lock_ok": True, "citations_valid": False, "refused": True},
                 "guardrail": "blocked: prompt-injection pattern in the question",
                 "latency_ms": {"total": round((time.perf_counter() - t0) * 1000, 2)}, "cache": "miss"}
+    # LLM injection judge (Nova Pro): catches attack wordings the regex has never seen.
+    # Fails closed: if the judge is unavailable, the question is refused.
+    guard = await run_in_threadpool(judge_injection, q.question)
+    if guard["injection"]:
+        return {"question": q.question, "answer": REFUSAL, "sources": [],
+                "checks": {"number_lock_ok": True, "citations_valid": False, "refused": True},
+                "guardrail": f"blocked: LLM injection judge ({guard['reason']})",
+                "latency_ms": {"guard": guard["ms"], "total": round((time.perf_counter() - t0) * 1000)},
+                "cache": "miss"}
     try:
         # retrieval is CPU-bound and generation is a blocking SDK call: keep the event loop free
         out = await run_in_threadpool(rag().answer, q.question)
@@ -91,7 +104,7 @@ async def ask(q: Question):
                    "citations_valid": cites["citations_valid"],
                    "refused": refused or guardrail is not None},
         "guardrail": guardrail,
-        "latency_ms": {**{k: round(v) for k, v in out["latency_ms"].items()},
+        "latency_ms": {"guard": round(guard["ms"]), **{k: round(v) for k, v in out["latency_ms"].items()},
                        "total": round((time.perf_counter() - t0) * 1000)},
     }
     if guardrail is None:
