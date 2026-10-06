@@ -30,6 +30,9 @@ def main():
                         (local_prefix, TARGET)).rowcount
     n_run = con.execute("UPDATE runs SET artifact_uri = REPLACE(artifact_uri, ?, ?)",
                         (local_prefix, TARGET)).rowcount
+    # traces keep their artifact location in a tag; spans themselves live in the DB
+    con.execute("UPDATE trace_tags SET value = REPLACE(value, ?, ?) WHERE value LIKE ?",
+                (local_prefix, TARGET, f"%{local_prefix}%"))
     con.commit()
     left = con.execute("SELECT COUNT(*) FROM runs WHERE artifact_uri LIKE 'file:///C:%'").fetchone()[0]
     runs = con.execute("SELECT COUNT(*) FROM runs").fetchone()[0]

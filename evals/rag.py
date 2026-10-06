@@ -96,6 +96,7 @@ class RAG:
                                max_tokens=300, temperature=0.0)
         self.gen_input_tokens += usage.get("input_tokens", 0)
         self.gen_output_tokens += usage.get("output_tokens", 0)
+        self.last_usage = usage          # per-call token usage, read by the online tracer
         return text
 
     def answer(self, question: str) -> dict:
